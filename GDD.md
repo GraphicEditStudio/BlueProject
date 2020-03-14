@@ -8,9 +8,12 @@ Created by: BlueGame Team
 ## Overview
 
 ### Gameplay
-1 short sentences about the overall gameplay
-1-2 Paragraphs setting up the storyline or environment of the game.  Describe the first 2 minutes after the player hits the start button.
-2-3 sentences that sum up the general gameplay, the general visual style and the overall feel of the game.
+You fly a Space ship from left to right. The screen will automatically scroll and you can move around on it.
+The ship will shoot a basic projectile automatically. On your way you will find consumables and upgrades.
+Enemies Will come from the right side of the screen in various patterns.
+There will ve various obstacles in your way like meteors or you will fly through a planet dodging rocks.
+At the end of a level there will be some sort of boss or bigger enemy.
+There will be milestones the player can reach wich allows him to unlock new ships and upgrades / consumables wich he can find along the way.
 
 ### Target Platform
 What platforms are you making this game for, what engine is it in, what are the min specs players need to play this, etc etc?
