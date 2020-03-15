@@ -81,6 +81,10 @@ when all lifes are gone, the player needs to restart the game but keeps his unlo
 
 
 ### Level Types:
+We will aim for 5 Different worlds, devided each by 3 stages.
+2 basic stages that you have to get through, while killing at least some amount of enemies
+The third stage will be a bit shorter and have a Boss fight at the end.
+each world will have it's own unique colour scheme and music theme. Also each world will have different enemies.
 There will be 2 types of levels: completely open field and about 20% levels with objects in your path, comming from the upper and lower end of the screen, that you will need to avoid. (like going though a mechanical fortress or through a planet)
 
 
