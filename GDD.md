@@ -46,12 +46,12 @@ We will focus on a PC Version first.
 This game will be very easy to port to other decives, so an android / iOS version will be made if desired by the developers.
 
 ### Visual Style
-The Visuals will be CLEAN and GEOMETRICAL. Sharp edges, no outlines.
+The Visuals will be CLEAN and GEOMETRICAL. Sharp edges, no outlines, no pixel art.
 The background will be filled with abstract geometrical shapes but still looks like a galaxy / night sky.
 
 ### Audio Style
 Audio in generell will be CLEAN aswell.
-The music will have an oldschool Trance / Techno vibe. Very electronic in nature.
+The music will have an oldschool Trance / Techno vibe. Very electronic in nature. I will be upbeat and fast to make it feel energetic and make you feel like there's a space fight with action going on.
 Every sound in the game will be made by a synthesizer. There will be no samples to enforce the abstract, electronical nature of the visuals.
 
 ### Starting Out / Main Menu
