@@ -31,7 +31,8 @@ There is three type of ship:
 - intermedial moving with medium armor and medium size. More tube styled with wings in one plane etc.  
 - slow moving with strong armor (big hp) and maximum size. "Fat boy" , with short wings or without wings.  
 
-Just other sprite/model and other characteristics, nothing especial.
+Just other sprite/model and other characteristics, nothing special.  
+![png](GDD_files/healingDrawingShipsScheme202003151930.png "sketch")
 
 The fast ship need less **hyper space particles** 25% for hyper jump into boss space, the slow ship need more **hyper space particles** 100%.
 
