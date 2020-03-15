@@ -16,146 +16,87 @@ At the end of a level there will be some sort of boss or bigger enemy.
 There will be milestones the player can reach wich allows him to unlock new ships and upgrades / consumables wich he can find along the way.
 
 ### Target Platform
-What platforms are you making this game for, what engine is it in, what are the min specs players need to play this, etc etc?
+We will focus on a PC Version first.
+This game will be very easy to port to other decives, so an android / iOS version will be made if desired by the developers.
 
 ### Visual Style
-Description of the visual style. This section of the game design document is very important when the director is not the visual designer. Even when the same person, this section will be a great inspiration and motivator for the rest of the team, as well as help pitch the idea to any stakeholders.
-
+The Visuals will be CLEAN and GEOMETRICAL. Sharp edges, no outlines.
+The background will be filled with abstract geometrical shapes but still looks like a galaxy / night sky.
 
 ### Audio Style
-Describe the Audio style of the game..
-- Music style and Genre with References
-- Audio Effects style
-- The kind of characters that would have dialogue with references
+Audio in generell will be CLEAN aswell.
+The music will have an oldschool Trance / Techno vibe. Very electronic in nature.
+Every sound in the game will be made by a synthesizer. There will be no samples to enforce the abstract, electronical nature of the visuals.
 
-
-### Starting Out
+### Starting Out / Main Menu
 Game start – Main Menu – Character Selection/Creation
-- Describe how the game loads up, what does the player do?
-- What happens after he/she gets past the loading screen and first menu?
-- How is the character selection / creation handled?
-- How is their character management handled?  How do they outfit their character?  What is the interface like with the store or management screen?
-- What does the player use to purchase upgrades for his weapon, how is this currency earned? What can be purchased?  Can they sell back?
-- Do they even have access to this before the intro campaign?
+- The game will start out with our Logo, then the Logo of the game and a loading bar
+- After that, you will be in the main menu right away. The graphics will be clean and minimalistic. There will be a Continue, Start New and exit button in the middle. To the left and the right there will be arrows. Those will lead to the Upgrades and Ships menus. in the upper right corner there will e a cogwheel for an options menu. there you can adjust the music / sound volume, edit window or fullscreen resolutions and reset your progress completely.
+- in the Ship selection menu there will be icons for each ship. when you click on them you will see their stats and how to unlock them.
+- in the upgrades menu there will be the same (but with the upgrages uf course), aswell as the option to lock / unlock the upgrades you can find along the way.
+- The upgrades can then be randomly found along the way by destroying enemies.
 
 ### Game Start and Intro
-- After they create and setup their character what do they do?  How do they start the game? How do they choose or find a server?  Are their choices limited in the beginning?
-- Is there a single player option and a multiplayer?  Is there some kind of tutorial they go through? Maybe a start mission or a brief little story mode to guide them through the mechanics of the game, introducing them to one mechanic per level, setting up the level so that they need a minimum amount of points to pass and that they have to use a specific mechanic in the level to achieve that.
-- How many levels do they go through to learn all of the basic mechanics?
-- General overview of gameplay, how does the level start, what information is displayed to the player before, during and immediately after loading and how is it displayed?
-- How are the players setup and spawned?
-- Describe the gameplay briefly once the game starts
+- When you first start, you will be in the first level straight away. A message will pop open, telling you that enemies are comming and that you need to kill them. After 3 groups of enemies, your first upgrade will appear. When collected another message will pop open, telling you that there will be way more out there and that you have to kill more enemies and look for them to find them.
+- that will be all the tutorial we need for now
 
 ### In-Game HUD & Menus
-- Describe the HUD in a sentence or two, what information is being displayed and how?
-- How are the menu's, the server selection hub, the store, the mission selections visually represented and interacted with in game?
+- In the upper left therre will be a health / life bar, telling you how many hits you can take before a game over.
+In the upper right there will be a bar that is telling you how many enemies you killed / missed
+In the upper center it will show you your current usable upgrades (some ammo / cooldown based)
+- You can access a pause menu when ESC is pressed (menu button on android) that will pause the game, giving you the option to continue, restart or quit to main menu. More information about the game / player will be shown here.
 
 ### Multiplayer
-- For the multiplayer how is the server setup handled?  Alternatively how do non hosts find servers and how are their paired with other players?
-- What environments/levels are available to the player in the beginning?  What game options are available to players and the host before the game starts?
-- Describe in-game options available to both the host and the players.  How is the options screen displayed?
-- What happens when the match is over?  What A/V event is displayed for the winners / losers?
-- How are the scores tabulated and describe the end-game / leaderboard screen
-- What options do the players have right before exiting the match?
-- What happens immediately after the players exit the match? What screen are they taken to and what do they get from the match(currency, score, xp, etc etc)
-
-## UI
-
-### Main Menu
-Describe the aesthetics and style of the menu, how it is displayed and how it is interacted with.  Cite examples and post images of reference menus.
-Flowchart and/or Wireframe of Main menu
-
-### Player Customization / Store
-List the elements and options for the UI involved with setting up the player, buying and selling weapons, equiping items, etc etc.
-Flow Chart and/or Wireframe
-
-### Game setup Screen
-Go over the elements, options and UI involved with setting up or joining a match in multiplayer or starting/resuming a single player game.
-Flow Chart and/or Wireframe
-
-### In-Game Options Menu
-Flow Chart and/or Wireframe
-
-### In-Game HUD
-Describe what information needs to be displayed and how it will be displayed.  Cite examples and shot sample shots of other games that contain similar styles or elements
-Wireframe
+If any Multiplayer at all, i suggest a solution, where 1 player can host and another can join. Enemy health will be x1.8 or something then. (needs playtesting)
 
 ### Game Over Screen
-What information is displayed once a match is finished?
-Wireframe
+When all health is gone, the player needs to restart the current level.
+when all lifes are gone, the player needs to restart the game but keeps his unlocked ships / upgrades.
 
-### Level Selection
-Describe the level selection and unlocking process.  How many levels does your average player start out with and how does he progress through the game?  How are the levels organized and grouped?  Are there distinct areas within the game and levels within those areas?  What motivates the player to unlock and go through the levels?
-WireFrame
 
 ### Level Types:
-If there are distinct sectors or groupings of levels(ie: desert, cities, river, outpost) how are they grouped and what groups are planned?  How does the player access/unlock them?  Each level type or sector should have a template that defines key characteristics that are common in all levels within this sector, not only visually but even strategically.  Describe each level type in detail and go over the characteristics that define them, both from an aesthetic and gameplay stand point.
+There will be 2 types of levels: completely open field and about 20% levels with objects in your path, comming from the upper and lower end of the screen, that you will need to avoid. (like going though a mechanical fortress or through a planet)
 
-### Full Level List
-A full rundown of the levels to be included in the game, organized by grouping.  Full details of each level should be contained within a separate level design document.
-Gamplay
-Go over the gameplay from start to finished.. Break this section up into the setup in the beginning, what the first couple things are that happens when the match starts. How do the players prepare or get ready?
-- What's the middle game like, what will the player spend the majority of his time doing while playing the game?
-- What are our emotional objectives in the player, what kind of gameplay are we trying to foster here and how are we achieving or working towards those goals?
-- What kind of play styles are available to the player?
-- How does the player interact with the environment?
-- What are the main challenges facing the player and how are we rewarding the player for successful behavior.
-- Describe the multiplayer aspect of gamplay both from the adversarial/competitive aspect and from the co-operative aspect
 
 ### Mechanics
-What kind of mechanics are to be employed in the game?  Go over movement, combat, health, equipment usage, special abilities and anything else that governs how the player plays the game.
+The basic controls will be up, down, left and right movement. A basic projectile will be shot automatically rather quickly, but it has low damage. The usable upgrades will be displayed on the upper middle of the screen and can be used by pressing 1-4 (or touching them on touchscreen). Every ship will have a unique ability like going faster, but less health. slower but stronger basic projectile.
+Examples of upgrades would be A missle swarm attack, a laser instead of a basic projectile, a fast dash or shooting 2 bullets instead of 1.
 
-### Controls
-Describe how the player controls his character, fires his weapon, etc etc.
 
 ### Modes
-What modes are available to the player, if any?
+When the game is finished the player will unlock a HELL mode where enemies are stronger in some capacity (more health / shoot faster)
 
-### Winning The Match
-Describe the conditions for winning the game.  How long do matches/games last?  What determines when the game is over?
-
-### Score
-After the match is over, how is the score calculated and how are
+### Winning
+The player wins, whe he reaches the end of the level / defeats the final enemy. He will then also be informed how many enemies he killed / missed.
 
 ### Currency
-How much money do the players earn per match or per action?  Are there modifiers applied to this amount for specific actions?
+This is something i would put in a free android version only. the player can ern currency to unlock things instead of getting it as random drops or unlocking them by beating bosses / levels. We can then have the player watch ads for more currency or make him pay to unlock every / get more currency.
 
-### Challenges of importance
-Are there certain challenges, events or levels within the game that are more important and challenging than others.  Challenges that represent large progress jumps and can unlock new items, abilities or areas
 
 ### Missions and Achievements
-Is there a mission or achievement system? How does it work?  What is the purpose of this system? Go over all achievements and rewards
+The player will be informed that he is getting an archievement for clearing 100% of enemies on each stage.
 
 ## Assets
-A technical documentation describing the requirements of all assets created for the game.
-2D: Style and Requirements for model sheets, environmental illustrations, and promo pieces.
-3D: Style and Requirements budgets for Chars, props and weapons
-Textures: Dimensions, maps needed and file formats
-Naming conventions with examples
-Animation requirements: Rigging limits, Programs to be used for rigging and animation
-
-
+The player ships.
+A LOT of different enemy sprites.
+Background art and moving pieces for the background.
+Sound and music.
+Well... we need pretty much everything i discribed above.
 
 ### Characters
-A run down of all of the 2D, 3D, Animation and Audio work needed for the characters of the game.  Including back story, abilities and special traits
+Art for each ship and enemy is required.
 
 ### Weapons
-A run down of all of the 2D, 3D, VFX and Audio work needed for the weapons of the game
-All stats and abilities of each weapon to be described in detail as well as their cost
+We need code to make every weapon unique. Heat seeking missles, lasers, rockets, bombs.
+Also some enemies will shoot at you. Maybe they will use the weapons that you can unlock along the way to give you a taste of them.
+Also saves a bit of workload.
 
-### Equipment and Upgrades
-A run down of all of the 2D, 3D and Audio work needed for the equipment of the game
-All costs, abilities and bonuses associated with equipment to be laid out in detail
 
-### Environmental
-All global environmental assets(which could be reskinned depending on the level they appear in) to be laid out here as well as their role in the puzzle process and their possible effect on the scene and environment around them.
+### Story and Cinematics
+- Wont be needed since this is a pretts simple game
 
-### Audio
-All global audio assets like UI sounds and audio tracks
 
-### Back Story
-Desribe the backstory of the game, if any
 
-### Cinematics
-Any cinematics should be listed and described here.  Further detail to be found in a beat sheet
+THANK YOU all for reading this. And THANK YOU for working with us on this project.
+I would love to hear any suggestions on our Discord server.
 
