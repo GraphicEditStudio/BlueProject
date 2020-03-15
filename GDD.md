@@ -72,7 +72,8 @@ In the upper right there will be a bar that is telling you how many enemies you 
 In the upper center it will show you your current usable upgrades (some ammo / cooldown based)
 - You can access a pause menu when ESC is pressed (menu button on android) that will pause the game, giving you the option to continue, restart or quit to main menu. More information about the game / player will be shown here.
 
-(GDD_files/UI and Upgrade.png)
+
+![UI and Upgrade](https://github.com/GraphicEdit/BlueProject/blob/master/GDD_files/UI%20and%20Upgrade.png)
 
 ### Multiplayer
 If any Multiplayer at all, i suggest a solution, where 1 player can host and another can join. Enemy health will be x1.8 or something then. (needs playtesting)
