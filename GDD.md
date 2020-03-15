@@ -11,9 +11,34 @@ Created by: BlueGame Team
 You fly a Space ship from left to right. The screen will automatically scroll and you can move around on it.
 The ship will shoot a basic projectile automatically. On your way you will find consumables and upgrades.
 Enemies Will come from the right side of the screen in various patterns.
-There will ve various obstacles in your way like meteors or you will fly through a planet dodging rocks.
+There will be various obstacles in your way like meteors or you will fly through a planet dodging rocks.
 At the end of a level there will be some sort of boss or bigger enemy.
 There will be milestones the player can reach wich allows him to unlock new ships and upgrades / consumables wich he can find along the way.
+
+---
+
+Player space ship must destroy some determined number of enemies and collect the **hyper space particles** that jump into hyperspace where will fight vs boss from hyperspace dimension, which atack subspace dimension(usual space).  
+This means if you lazy ass, then you can fly long time without kill enough enemies but level will be not switched to boss.  
+The boss battle have some fractals or sinus fast left to right flying curves and fast flying colored lines on background.  
+
+The player space ship have three weapon styles:
+- **energy impulse/ laser ray** etc weapon. Can be turned on/off on right side of screen for mobile, and some keyboard shortcut and mouse button for desktop  
+- **rockets** , can be upgraded from one per shot to 5 per shot or shooted rockets depend of ship. Shooted uses right side of mobile screen , or space and other mouse button for keyboard. In shot time rockets first flying from ship hull along one vertical line. First rocket on ship center level other 4 upper and lower than center with similar distance and parallel trajectory, and than fly parallel forward. Rockets can be collected or buyed in menu before level started  
+- **hyper space particles plasma ball** , can be collected on level, after destroy enemies, which use it as fuel that jump into our space. Very effective vs boss, but usual weapon enough too that damage boss. Plasma ball just flying forward, after some sfx and vfx effects of charging process.
+
+There is three type of ship:
+- fast moving with low armor (tiny hp) and minimal size. Triangle star based can be enough good.  
+- intermedial moving with medium armor and medium size. More tube styled with wings in one plane etc.  
+- slow moving with strong armor (big hp) and maximum size. "Fat boy" , with short wings or without wings.  
+
+Just other sprite/model and other characteristics, nothing especial.
+
+The fast ship need less **hyper space particles** 25% for hyper jump into boss space, the slow ship need more **hyper space particles** 100%.
+
+Fast ship shoot one rocket per shot.  
+Slow ship shoot 5 rockets per shot.
+
+---
 
 ### Target Platform
 We will focus on a PC Version first.
