@@ -6,53 +6,46 @@ public class Player : MonoBehaviour {
 
     private float speed = 12f;
 
-    private Vector2 screenTop;
-    private Vector2 screenBottom;
+    bool moveup = false;
+    bool movedown = false;
 
-    private float shipHeight;
-    private float shipWidth;
+    public SpriteRenderer ShipRenderer;
 
 	// Use this for initialization
-	void Start () {
-        this.screenBottom = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
-        this.screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        this.shipHeight = transform.localScale.y / 2;
-        this.shipWidth = transform.localScale.x / 2;
+	void Start ()
+    {
+        ShipRenderer.GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
-	void Update () {
-        if (GameController.instance.isDead == false) {
-            if (Input.GetButton("Vertical")) {
-                float move = Input.GetAxis("Vertical") * Time.deltaTime * this.speed;
-                float shipY = transform.position.y;
+	void Update ()
+    {
+        if (GameController.instance.isDead == false)
+        {
+            if ((Input.GetAxisRaw("Vertical") > 0) && (transform.position.y <= 4.4f))
+            {
 
-                if (shipY > this.screenTop.y - this.shipHeight && move > 0) {
-                    move = 0;
-                }
-
-                if (shipY < this.screenBottom.y + this.shipHeight && move < 0) {
-                    move = 0;
-                }
-
-                transform.Translate(move * Vector2.up);
-                //Debug.Log(shipY + " " + this.screenTop.y + " " + this.screenBottom.y);
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
             }
-
-            if (Input.GetButton("Horizontal")) {
-                float move = Input.GetAxis("Horizontal") * Time.deltaTime * this.speed;
-                float shipX = transform.position.x;
-
-                if (shipX > this.screenTop.x - this.shipWidth && move > 0) {
-                    move = 0;
-                }
-
-                if (shipX < this.screenBottom.x + this.shipWidth && move < 0) {
-                    move = 0;
-                }
-
-                transform.Translate(move * Vector2.right);
-                //Debug.Log(shipY + " " + this.screenTop.y + " " + this.screenBottom.y);
+            else if ((Input.GetAxisRaw("Vertical") < 0) && (transform.position.y >= -4.4f))
+            {
+                transform.Translate(Vector3.down * speed * Time.deltaTime);
+            }
+             
+            if ((Input.GetAxisRaw("Horizontal") > 0) && (transform.position.x >= -7))
+            {
+                ShipRenderer.flipX = false;           
+                transform.Translate(Vector3.left * speed * 1.5f * Time.deltaTime);
+            }
+            else if ((Input.GetAxisRaw("Horizontal") < 0) && (transform.position.x <= 7))
+            {
+                transform.Translate(Vector3.right * speed * 1.5f * Time.deltaTime);
+                ShipRenderer.flipX = true;
+            }
+            else if (Input.GetAxisRaw("Horizontal") == 0)
+            {
+                if (transform.position.x != 0)
+                    transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, transform.position.y, transform.position.z), speed / 2 * 1.5f * Time.deltaTime);        
             }
         }
     }
