@@ -8,11 +8,15 @@ public class Player : MonoBehaviour {
 
     bool moveup = false;
     bool movedown = false;
+    float lastshot = 0;
+    public static bool isShooting = false;
 
     public SpriteRenderer ShipRenderer;
 
-	// Use this for initialization
-	void Start ()
+    public Transform Projectile;
+
+    // Use this for initialization
+    void Start ()
     {
         ShipRenderer.GetComponent<SpriteRenderer>();
     }
@@ -24,28 +28,56 @@ public class Player : MonoBehaviour {
         {
             if ((Input.GetAxisRaw("Vertical") > 0) && (transform.position.y <= 4.4f))
             {
-
+                
                 transform.Translate(Vector3.up * speed * Time.deltaTime);
             }
             else if ((Input.GetAxisRaw("Vertical") < 0) && (transform.position.y >= -4.4f))
             {
+                
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
             }
              
             if ((Input.GetAxisRaw("Horizontal") > 0) && (transform.position.x >= -7))
             {
-                ShipRenderer.flipX = false;           
+                ShipRenderer.flipX = false;
+                ProjectileScript.flipX = false;
                 transform.Translate(Vector3.left * speed * 1.5f * Time.deltaTime);
             }
             else if ((Input.GetAxisRaw("Horizontal") < 0) && (transform.position.x <= 7))
             {
                 transform.Translate(Vector3.right * speed * 1.5f * Time.deltaTime);
                 ShipRenderer.flipX = true;
+                ProjectileScript.flipX = true;
             }
             else if (Input.GetAxisRaw("Horizontal") == 0)
             {
                 if (transform.position.x != 0)
-                    transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, transform.position.y, transform.position.z), speed / 2 * 1.5f * Time.deltaTime);        
+                {                   
+                    transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, transform.position.y, transform.position.z), speed * 1.5f * Time.deltaTime);
+                }
+            }
+
+            if (Time.time - lastshot > 0.5f)
+            {
+                if ((Input.GetKey(KeyCode.Space)) && (!HeatBar.BarEmpty))
+                {
+                    isShooting = true;
+                    if (!ShipRenderer.flipX)
+                    {
+                        Instantiate(Projectile, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), Quaternion.identity);
+                    }
+                    else
+                    {
+                        Instantiate(Projectile, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), Quaternion.identity);
+                    }
+                }
+
+                lastshot = Time.time;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                isShooting = false;
             }
         }
     }
