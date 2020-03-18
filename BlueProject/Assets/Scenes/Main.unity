@@ -225,7 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069664a2c9dd61d4ca8de2642a5e595e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   ShipRenderer: {fileID: 1016127919}
   Projectile: {fileID: 5015891060873340793, guid: fc52189bf8ce7cd4187f33df939feec5,
     type: 3}
