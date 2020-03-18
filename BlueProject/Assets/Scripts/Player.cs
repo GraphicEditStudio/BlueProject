@@ -24,7 +24,7 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (GameController.instance.isDead == false)
+        //if (GameController.instance.isDead == false)
         {
             if ((Input.GetAxisRaw("Vertical") > 0) && (transform.position.y <= 4.4f))
             {
@@ -57,9 +57,14 @@ public class Player : MonoBehaviour {
                 }
             }
 
-            if (Time.time - lastshot > 0.5f)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                if ((Input.GetKey(KeyCode.Space)) && (!HeatBar.BarEmpty))
+                isShooting = true;
+            }
+
+            if ((Time.time - lastshot > 0.5f) && (isShooting))
+            {
+                if (!HeatBar.BarEmpty)
                 {
                     isShooting = true;
                     if (!ShipRenderer.flipX)
@@ -79,16 +84,19 @@ public class Player : MonoBehaviour {
             {
                 isShooting = false;
             }
+            
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D coll) {
+    /*private void OnTriggerEnter2D(Collider2D coll) {
         //Debug.Log(coll.gameObject.tag);
         if (coll.gameObject.tag == "Enemy") {
             GameController.instance.PlayerCrash();
             this.gameObject.GetComponent<Animator>().CrossFade("Explosion",0);
             //this.gameObject.SetActive(false);
         }
+        
     }
+    */
     
 }
