@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+
         //if (GameController.instance.isDead == false)
         {
             if ((Input.GetAxisRaw("Vertical") > 0) && (transform.position.y <= 4.4f))
