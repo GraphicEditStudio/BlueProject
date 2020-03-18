@@ -12,6 +12,11 @@ public class Player : MonoBehaviour {
     private float shipHeight;
     private float shipWidth;
 
+
+	private float move;
+	private float shipY;
+	private float shipX;
+
 	// Use this for initialization
 	void Start () {
         this.screenBottom = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
@@ -24,8 +29,8 @@ public class Player : MonoBehaviour {
 	void Update () {
         if (GameController.instance.isDead == false) {
             if (Input.GetButton("Vertical")) {
-                float move = Input.GetAxis("Vertical") * Time.deltaTime * this.speed;
-                float shipY = transform.position.y;
+                move = Input.GetAxis("Vertical") * Time.deltaTime * this.speed;
+                shipY = transform.position.y;
 
                 if (shipY > this.screenTop.y - this.shipHeight && move > 0) {
                     move = 0;
@@ -40,8 +45,8 @@ public class Player : MonoBehaviour {
             }
 
             if (Input.GetButton("Horizontal")) {
-                float move = Input.GetAxis("Horizontal") * Time.deltaTime * this.speed;
-                float shipX = transform.position.x;
+                move = Input.GetAxis("Horizontal") * Time.deltaTime * this.speed;
+                shipX = transform.position.x;
 
                 if (shipX > this.screenTop.x - this.shipWidth && move > 0) {
                     move = 0;
