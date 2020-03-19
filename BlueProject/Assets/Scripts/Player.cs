@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    private float speed = 12f;
+    public float speed = 12f;
+    Rigidbody2D rb;
 
     private Vector2 screenTop;
     private Vector2 screenBottom;
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        rb = GetComponent<Rigidbody2D>();
         this.screenBottom = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
         this.screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         this.shipHeight = transform.localScale.y / 2;
@@ -26,10 +28,10 @@ public class Player : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (GameController.instance.isDead == false) {
             if (Input.GetButton("Vertical")) {
-                move = Input.GetAxis("Vertical") * Time.deltaTime * this.speed;
+                move = Input.GetAxis("Vertical") * Time.fixedDeltaTime * this.speed;
                 shipY = transform.position.y;
 
                 if (shipY > this.screenTop.y - this.shipHeight && move > 0) {
@@ -40,12 +42,13 @@ public class Player : MonoBehaviour {
                     move = 0;
                 }
 
-                transform.Translate(move * Vector2.up);
+                rb.AddForce(move * Vector2.up);
+                //transform.Translate(move * Vector2.up);
                 //Debug.Log(shipY + " " + this.screenTop.y + " " + this.screenBottom.y);
             }
 
             if (Input.GetButton("Horizontal")) {
-                move = Input.GetAxis("Horizontal") * Time.deltaTime * this.speed;
+                move = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * this.speed;
                 shipX = transform.position.x;
 
                 if (shipX > this.screenTop.x - this.shipWidth && move > 0) {
@@ -56,7 +59,8 @@ public class Player : MonoBehaviour {
                     move = 0;
                 }
 
-                transform.Translate(move * Vector2.right);
+                rb.AddForce(move * Vector2.right);
+                //transform.Translate(move * Vector2.right);
                 //Debug.Log(shipY + " " + this.screenTop.y + " " + this.screenBottom.y);
             }
         }
