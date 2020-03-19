@@ -35,20 +35,23 @@ public class SpaceItems : MonoBehaviour {
     }
     IEnumerator SpawnItems(float waitTime)
     {
-        spawnY = Random.Range(minSpawnY, maxSpawnY);
-        adjScale = Random.Range(scaleMin, scaleMax);
-        adjRotation = Random.Range(rotateMin, rotateMax);
-
-        spaceitems[recentAstroid].transform.position = new Vector2(spawnX, spawnY); // set spawn position
-        spaceitems[recentAstroid].transform.localScale = new Vector3(adjScale, adjScale, 1); // change items scale 
-        spaceitems[recentAstroid].transform.Rotate(0, 0, adjRotation); // rotate items 
-
-        recentAstroid++;
-
-        if (recentAstroid >= maxspaceitems)
+        while (true)
         {
-            recentAstroid = 0;
+            spawnY = Random.Range(minSpawnY, maxSpawnY);
+            adjScale = Random.Range(scaleMin, scaleMax);
+            adjRotation = Random.Range(rotateMin, rotateMax);
+
+            spaceitems[recentAstroid].transform.position = new Vector2(spawnX, spawnY); // set spawn position
+            spaceitems[recentAstroid].transform.localScale = new Vector3(adjScale, adjScale, 1); // change items scale 
+            spaceitems[recentAstroid].transform.Rotate(0, 0, adjRotation); // rotate items 
+
+            recentAstroid++;
+
+            if (recentAstroid >= maxspaceitems)
+            {
+                recentAstroid = 0;
+            }
+            yield return new WaitForSeconds(waitTime);
         }
-        yield return new WaitForSeconds(waitTime);
     }
 }
