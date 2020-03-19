@@ -66,7 +66,7 @@ public class Player : MonoBehaviour {
         //Debug.Log(coll.gameObject.tag);
         if (coll.gameObject.tag == "Enemy") {
             GameController.instance.PlayerCrash();
-            this.gameObject.GetComponent<Animator>().CrossFade("Explosion",0);
+            this.GetComponent<Animator>().CrossFade("Explosion",0);
             //this.gameObject.SetActive(false);
         }
     }
