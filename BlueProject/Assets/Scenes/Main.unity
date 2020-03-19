@@ -333,6 +333,28 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2209197472925280973, guid: 0fc938766c549ad4f9f34c91fab48877, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0fc938766c549ad4f9f34c91fab48877, type: 3}
+--- !u!1 &1596213645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6563036454229069805, guid: d35fef751347b644e82e15e9d2a9427b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6939805325836489108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1596213647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596213645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd6439bd3a37394db4b748e8409257d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initForce: {x: -3, y: -1}
+  rocketPrefab: {fileID: 9019721013778163892, guid: 40a46d27812709d48bdf3e1bf9046306,
+    type: 3}
+  ammo: 20
 --- !u!1 &1744769952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1873640954625496894, guid: 0fc938766c549ad4f9f34c91fab48877,
@@ -367,11 +389,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LinearDrag
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6192481589066591899, guid: d35fef751347b644e82e15e9d2a9427b,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6939805325973547313, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
