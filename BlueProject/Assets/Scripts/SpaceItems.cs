@@ -10,7 +10,6 @@ public class SpaceItems : MonoBehaviour {
 
     private int maxspaceitems = 40;
     private float spawnRate = 1f;
-    private float spawnDelay = 0f;
     private float minSpawnY = -4f;
     private float maxSpawnY = 4f;
     private float spawnX = 12.0f;
@@ -30,19 +29,17 @@ public class SpaceItems : MonoBehaviour {
         Vector2 startPos = new Vector2(20, 20);
         spaceitems = new GameObject[maxspaceitems];
         for (int i = 0; i < maxspaceitems; i++) {
-            spaceitems[i] = (GameObject)Instantiate(spaceitemPrefab, startPos, Quaternion.identity);
+            spaceitems[i] = Instantiate(spaceitemPrefab, startPos, Quaternion.identity);
         }
-        
+        StartCoroutine(SpawnItems(spawnRate));
     }
-	
-	// Update is called once per frame
-	void Update () {
-        spawnDelay += Time.deltaTime;
-        if (spawnDelay >= spawnRate) {
-            spawnDelay = 0;
+    IEnumerator SpawnItems(float waitTime)
+    {
+        while (true)
+        {
             spawnY = Random.Range(minSpawnY, maxSpawnY);
             adjScale = Random.Range(scaleMin, scaleMax);
-            adjRotation = Random.Range(rotateMin,rotateMax);
+            adjRotation = Random.Range(rotateMin, rotateMax);
 
             spaceitems[recentAstroid].transform.position = new Vector2(spawnX, spawnY); // set spawn position
             spaceitems[recentAstroid].transform.localScale = new Vector3(adjScale, adjScale, 1); // change items scale 
@@ -50,9 +47,11 @@ public class SpaceItems : MonoBehaviour {
 
             recentAstroid++;
 
-            if (recentAstroid >= maxspaceitems) {
+            if (recentAstroid >= maxspaceitems)
+            {
                 recentAstroid = 0;
             }
+            yield return new WaitForSeconds(waitTime);
         }
     }
 }
