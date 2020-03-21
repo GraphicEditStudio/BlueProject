@@ -8,12 +8,18 @@ public class ShootRocket : MonoBehaviour
     public GameObject rocketPrefab;
     KeyCode rocket = KeyCode.Space;
     public int ammo;
+    public float cooldown;
+    float shootTime = 0;
     void Update()
     {
         if (ammo > 0 && Input.GetKeyDown(rocket))
         {
-            Instantiate(rocketPrefab, transform).GetComponent<Rigidbody2D>().AddForce(initForce, ForceMode2D.Impulse);
-            ammo--;
+            if (Time.time > shootTime + cooldown)
+            {
+                shootTime = Time.time;
+                Instantiate(rocketPrefab, transform).GetComponent<Rigidbody2D>().AddForce(initForce, ForceMode2D.Impulse);
+                ammo--;
+            }
         }
     }
 }
