@@ -1,2 +1,0 @@
-# BlueProject
-BlueProject GAME

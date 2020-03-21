@@ -1,1 +1,0 @@
-Temporary folder for future files of GDD, like png jpg etc sketches.
