@@ -9,13 +9,13 @@ public class GameController : MonoBehaviour {
     public static GameController instance;
     public bool isDead = false;
     public Text txt;
-    public int displayDelay = 36;
+    public float displayDelay = 36;
 
     private IEnumerator Progressive(){
         string temporaryText = "Game Over";
         for(int i = 0; i < temporaryText.Length; i++){
             txt.text += temporaryText[i];
-            yield return new WaitForSeconds(displayDelay/100);
+            yield return new WaitForSeconds(displayDelay);
         }
     }
     private void Awake() {
