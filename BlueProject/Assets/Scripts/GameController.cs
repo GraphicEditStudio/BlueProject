@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour {
             currentInterval = MaxInterval;
             currentIndex++;
         }
-	currentIndex--;
+        currentInterval--;
     }
 
 }
