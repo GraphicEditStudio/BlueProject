@@ -8,19 +8,19 @@ public class GameController : MonoBehaviour {
 
     public static GameController instance;
     public bool isDead = false;
-    public GameObject displayText;
+    public Text txt;
 
     private void Awake() {
         if(instance == null) {
             instance = this;
         }
+        PlayerCrash();
     }
 
     public void PlayerCrash() {
         this.isDead = true;
         // Display the Game Over Screen
-        displayText = GameObject.Find("DisplayText");
-        displayText.text = "Game Over";
+        txt.text = "Game OVER";
     }
 
     private void Update() {
