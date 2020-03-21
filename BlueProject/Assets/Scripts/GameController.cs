@@ -9,7 +9,9 @@ public class GameController : MonoBehaviour {
     public static GameController instance;
     public bool isDead = false;
     public Text txt;
-
+    public int MaxInterval = 36;
+    private int currentInterval = 0;
+    private int currentIndex = 0;
     private void Awake() {
         if(instance == null) {
             instance = this;
@@ -20,7 +22,7 @@ public class GameController : MonoBehaviour {
     public void PlayerCrash() {
         this.isDead = true;
         // Display the Game Over Screen
-        txt.text = "Game OVER";
+        
     }
 
     private void Update() {
@@ -28,6 +30,17 @@ public class GameController : MonoBehaviour {
         if (this.isDead && Input.GetButtonDown("Jump")) {
             //...reload the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+    private void FixedUpdate(){
+        string temporaryText = "Game Over";
+        if(currentInterval == 0){
+            txt.text += temporaryText[currentIndex];
+            if(currentIndex == temporaryText.length - 1){
+                break;
+            }
+            currentInterval = MaxInterval;
+            currentIndex++;
         }
     }
 
