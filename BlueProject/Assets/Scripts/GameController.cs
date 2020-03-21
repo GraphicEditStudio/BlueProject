@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour {
         if(instance == null) {
             instance = this;
         }
-        PlayerClear();
+        
     }
     public void PlayerCrash() {
         this.isDead = true;
