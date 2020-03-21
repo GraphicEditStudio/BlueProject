@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootRocket : MonoBehaviour
+public class ShootLaser : MonoBehaviour
 {
-    public Vector2 initForce;
-    public GameObject rocketPrefab;
-    KeyCode rocket = KeyCode.Space;
+    public GameObject laserPrefab;
+    KeyCode laser = KeyCode.Mouse0;
     public int ammo;
     public float cooldown;
     float shootTime = 0;
     void Update()
     {
-        if (ammo > 0 && Input.GetKeyDown(rocket))
+        if (ammo > 0 && Input.GetKeyDown(laser))
         {
             if (Time.time > shootTime + cooldown)
             {
                 shootTime = Time.time;
-                Instantiate(rocketPrefab, transform).GetComponent<Rigidbody2D>().AddForce(initForce, ForceMode2D.Impulse);
+                Instantiate(laserPrefab, transform);
                 ammo--;
             }
         }
