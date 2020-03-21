@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
 
     public static GameController instance;
     public bool isDead = false;
-
+    public GameObject displayText;
 
     private void Awake() {
         if(instance == null) {
@@ -18,7 +18,9 @@ public class GameController : MonoBehaviour {
 
     public void PlayerCrash() {
         this.isDead = true;
-
+        // Display the Game Over Screen
+        displayText = GameObject.Find("DisplayText");
+        displayText.text = "Game Over";
     }
 
     private void Update() {
