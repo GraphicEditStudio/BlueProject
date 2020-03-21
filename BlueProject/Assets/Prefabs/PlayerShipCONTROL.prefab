@@ -32,6 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8070702644556129269}
+  - {fileID: 6715851057327972530}
   m_Father: {fileID: 6939805325973547318}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069664a2c9dd61d4ca8de2642a5e595e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 1500
 --- !u!50 &5567224576741245701
 Rigidbody2D:
   serializedVersion: 4
@@ -137,14 +138,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &6563036454229069805
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8070702644556129269}
+  - component: {fileID: 811510611008286367}
   m_Layer: 0
   m_Name: RocketSpawnPos
   m_TagString: Untagged
@@ -175,6 +177,23 @@ Transform:
   m_Father: {fileID: 1976932529866256627}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811510611008286367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563036454229069805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd6439bd3a37394db4b748e8409257d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initForce: {x: -3, y: -1}
+  rocketPrefab: {fileID: 9019721013778163892, guid: 40a46d27812709d48bdf3e1bf9046306,
+    type: 3}
+  ammo: 20
+  cooldown: 0.6
 --- !u!1 &6939805325973547316
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,3 +225,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8217939218206916549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6715851057327972530}
+  - component: {fileID: 8156112957375388465}
+  m_Layer: 0
+  m_Name: LaserSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6715851057327972530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8217939218206916549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9, y: -0.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1976932529866256627}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8156112957375388465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8217939218206916549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07779aa32d06ec84285b70cf427c56e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 5450700201470840311, guid: e2d0ee125a2c7314aa1c4cc67de6d29e,
+    type: 3}
+  ammo: 200
+  cooldown: 0.1

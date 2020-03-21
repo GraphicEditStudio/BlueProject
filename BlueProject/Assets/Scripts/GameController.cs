@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
             yield return new WaitForSeconds(displayDelay);
         }
     }
+
     private IEnumerator ProgressiveClear(){
         string temporaryText = "Cleared Level";
         for(int i = 0; i < temporaryText.Length; i++){
@@ -22,6 +23,7 @@ public class GameController : MonoBehaviour {
             yield return new WaitForSeconds(displayDelay);
         }
     }
+
     private void Awake() {
         if(instance == null) {
             instance = this;
@@ -32,6 +34,7 @@ public class GameController : MonoBehaviour {
         this.isDead = true;
         // Display the Game Over Screen
         StartCoroutine("Progressive");
+
     }
     public void PlayerClear(){
         StartCoroutine("ProgressiveClear");
