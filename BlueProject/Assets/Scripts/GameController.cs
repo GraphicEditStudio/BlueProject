@@ -37,6 +37,7 @@ public class GameController : MonoBehaviour {
 
     }
     public void PlayerClear(){
+        // Displays the clear screen
         StartCoroutine("ProgressiveClear");
     }
     private void Update() {
