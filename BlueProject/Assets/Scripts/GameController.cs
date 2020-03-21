@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class GameController : MonoBehaviour {
-
     public static GameController instance;
     public bool isDead = false;
     public Text txt;
     public float displayDelay = 0.45f;
-
     private IEnumerator Progressive(){
         string temporaryText = "Game Over";
         for(int i = 0; i < temporaryText.Length; i++){
@@ -29,9 +26,8 @@ public class GameController : MonoBehaviour {
         if(instance == null) {
             instance = this;
         }
-        //PlayerCrash();
+        PlayerClear();
     }
-
     public void PlayerCrash() {
         this.isDead = true;
         // Display the Game Over Screen
@@ -40,15 +36,10 @@ public class GameController : MonoBehaviour {
     public void PlayerClear(){
         StartCoroutine("ProgressiveClear");
     }
-
     private void Update() {
         if (this.isDead && Input.GetButtonDown("Jump")) {
             //...reload the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-    
-
-
-    
 }
