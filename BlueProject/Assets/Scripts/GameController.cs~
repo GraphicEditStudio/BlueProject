@@ -12,7 +12,6 @@ public class GameController : MonoBehaviour {
     public int MaxInterval = 36;
     private int currentInterval = 0;
     private int currentIndex = 0;
-    private bool progressing = true;
     private void Awake() {
         if(instance == null) {
             instance = this;
@@ -35,10 +34,10 @@ public class GameController : MonoBehaviour {
     }
     private void FixedUpdate(){
         string temporaryText = "Game Over";
-        if(currentInterval == 0 && progressing && this.isDead){
+        if(currentInterval == 0){
             txt.text += temporaryText[currentIndex];
             if(currentIndex == temporaryText.Length - 1){
-               progressing = false;
+                break;
             }
             currentInterval = MaxInterval;
             currentIndex++;
