@@ -28,9 +28,6 @@ public class GameController : MonoBehaviour {
         if(instance == null) {
             instance = this;
         }
-        if(txt == null){
-            txt = GameObject.Find("DisplayText");
-        }
         
     }
     public void PlayerCrash() {
