@@ -36,9 +36,5 @@ public class GameController : MonoBehaviour {
             //...reload the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-    }
-    
-
-
-    
+    }    
 }
