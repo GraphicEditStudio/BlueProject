@@ -272,3 +272,4 @@ MonoBehaviour:
     type: 3}
   ammo: 200
   cooldown: 0.1
+  laserToCreateOnStart: 10
