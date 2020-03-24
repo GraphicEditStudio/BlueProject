@@ -7,7 +7,7 @@ namespace BlueGame
 
     [CreateAssetMenu(menuName = "ObjectPooler", fileName = "NewObjectPooler")]
    
-	public class MainPool : ScriptableObject
+	public class MainPoolA : ScriptableObject
     {
 
         public GameObject poolableObject; //Drag here the GameObject you want to manage with the Pooling System

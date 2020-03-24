@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BlueGame2
+namespace BlueGame
 {
 
     [CreateAssetMenu(menuName = "ObjectPoolerB", fileName = "NewObjectPoolerB")]
@@ -47,7 +47,7 @@ namespace BlueGame2
             foreach (GameObject go in objectsList)
             {
                 
-                if (go != null && go.activeInHierarchy) counter++; // Count if the GameObject exists and is active
+                if (go != null && go.activeInHierarchy) counter++; 
             }
             return counter;
         }
@@ -61,7 +61,7 @@ namespace BlueGame2
                 if (go != null) Destroy(go);
             }
             
-            objectsList.Clear(); // Clear 
+            objectsList.Clear();  
         }
 
 

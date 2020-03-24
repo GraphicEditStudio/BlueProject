@@ -4,32 +4,32 @@ using UnityEngine;
 
 namespace BlueGame
 {
-    public class GeneralPoolerManagerB : MonoBehaviour
+    public class GeneralPoolerManagerA : MonoBehaviour
     {
    
- 	    public MainPoolB objectsPooler; //The array of Object Poolers.
+ 	    public MainPoolA objectsPooler; //The array of Object Poolers.
 
-        private static MainPoolB _objectsPooler;
-        private static GeneralPoolerManagerB generalPoolerManagerB;
+        private static MainPoolA _objectsPooler;
+        private static GeneralPoolerManagerA generalPoolerManagerA;
        
-	    public static GeneralPoolerManagerB Instance
+	    public static GeneralPoolerManagerA Instance
         {
             get
             {
-                if (!generalPoolerManagerB)
+                if (!generalPoolerManagerA)
                 {
-                    generalPoolerManagerB = FindObjectOfType(typeof(GeneralPoolerManagerB)) as GeneralPoolerManagerB;
-                    if (!generalPoolerManagerB)
+                    generalPoolerManagerA = FindObjectOfType(typeof(GeneralPoolerManagerA)) as GeneralPoolerManagerA;
+                    if (!generalPoolerManagerA)
                     {
                         Debug.LogError("Create an Empty GameObject and drag this Script on it.");
                     }
                     else
                     {
-                        generalPoolerManagerB.Init();
+                        generalPoolerManagerA.Init();
                     }
                 }
 
-                return generalPoolerManagerB;
+                return generalPoolerManagerA;
             }
         }
 
@@ -45,7 +45,7 @@ namespace BlueGame
 
        
        
-        public static MainPoolB GetObjectPooler(int index)  // Return the Object Pooler 
+        public static MainPoolA GetObjectPooler(int index)  // Return the Object Pooler 
         {
             if ( _objectsPooler) return _objectsPooler; else return null;
 			

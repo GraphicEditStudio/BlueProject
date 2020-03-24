@@ -150,8 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b954f1e30b28f7845a430f55e58132e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsPooler:
-  - {fileID: 11400000, guid: 419e887285c78e642a97554570328ede, type: 2}
+  objectsPooler: {fileID: 11400000, guid: 419e887285c78e642a97554570328ede, type: 2}
 --- !u!4 &63184039
 Transform:
   m_ObjectHideFlags: 0
@@ -251,7 +250,7 @@ GameObject:
   - component: {fileID: 815013898}
   - component: {fileID: 815013899}
   m_Layer: 0
-  m_Name: PoolerManager
+  m_Name: PoolerManagerA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,11 +279,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 815013897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c0dc36287e34741b557f6a966bcf61, type: 3}
+  m_Script: {fileID: 11500000, guid: a468a9cca519e9b46a020dbba30e0e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsPooler:
-  - {fileID: 11400000, guid: 53a346b080075cb41bc0c8cfc9bf5715, type: 2}
+  objectsPooler: {fileID: 11400000, guid: 53a346b080075cb41bc0c8cfc9bf5715, type: 2}
 --- !u!1 &1035935652
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +628,7 @@ PrefabInstance:
     - target: {fileID: 811510611008286367, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: rocketOnStart
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 811510611008286367, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}

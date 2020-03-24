@@ -14,12 +14,12 @@ public class ShootLaser : MonoBehaviour
 	float shootTime = 0;
     
 	public int laserOnStart = 0; // The number of laser to immediately instantiate when the game starts
-	private MainPool laserPooler;
+	private MainPoolA laserPooler;
 
     void Start()
     {
         
-        laserPooler = GeneralPoolerManager.GetObjectPooler(0); // Pooler Manager 
+        laserPooler = GeneralPoolerManagerA.GetObjectPooler(0); // Pooler Manager 
 		
         if (laserOnStart > 0) laserPooler.InitializePool(laserOnStart); //how many bullets
     }

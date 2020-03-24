@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using BlueGame2;
+using BlueGame;
 
 public class ShootRocket : MonoBehaviour
 {
