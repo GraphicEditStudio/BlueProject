@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0b51acdb13569e4d85a2bf370341ff4, type: 3}
-  m_Name: RocketPoolerB
+  m_Name: PoolerB-Rocket
   m_EditorClassIdentifier: 
   poolableObject: {fileID: 9019721013778163892, guid: 40a46d27812709d48bdf3e1bf9046306,
     type: 3}

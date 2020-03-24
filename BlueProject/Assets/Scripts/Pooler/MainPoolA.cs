@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BlueGame
 {
 
-    [CreateAssetMenu(menuName = "ObjectPooler", fileName = "NewObjectPooler")]
+    [CreateAssetMenu(menuName = "ObjectPoolerA", fileName = "NewObjectPoolerA")]
    
 	public class MainPoolA : ScriptableObject
     {
@@ -47,7 +47,7 @@ namespace BlueGame
             foreach (GameObject go in objectsList)
             {
                 
-                if (go != null && go.activeInHierarchy) counter++; // Count if the GameObject exists and is active
+                if (go != null && go.activeInHierarchy) counter++; 
             }
             return counter;
         }
@@ -61,7 +61,7 @@ namespace BlueGame
                 if (go != null) Destroy(go);
             }
             
-            objectsList.Clear(); // Clear 
+            objectsList.Clear(); 
         }
 
 

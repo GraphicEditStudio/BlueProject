@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b954f1e30b28f7845a430f55e58132e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsPooler: {fileID: 11400000, guid: 419e887285c78e642a97554570328ede, type: 2}
+  objectsPooler: {fileID: 11400000, guid: a4a6ecb5e03ec9643907dff17af55dee, type: 2}
 --- !u!4 &63184039
 Transform:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035935652}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a35e55ffa62434042b4d53685413ffe2, type: 3}
   m_Name: 
@@ -435,6 +435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceItem
       objectReference: {fileID: 0}
+    - target: {fileID: 1212743644561965414, guid: 0fc938766c549ad4f9f34c91fab48877,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6329686807080751547, guid: 0fc938766c549ad4f9f34c91fab48877,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -500,8 +505,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.22
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2209197472925280973, guid: 0fc938766c549ad4f9f34c91fab48877, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fc938766c549ad4f9f34c91fab48877, type: 3}
 --- !u!1 &1744769952 stripped
 GameObject:
@@ -628,12 +632,17 @@ PrefabInstance:
     - target: {fileID: 811510611008286367, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: rocketOnStart
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 811510611008286367, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: ammo
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 811510611008286367, guid: d35fef751347b644e82e15e9d2a9427b,
+        type: 3}
+      propertyPath: cooldown
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6192481589066591899, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
@@ -728,7 +737,12 @@ PrefabInstance:
     - target: {fileID: 8156112957375388465, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: laserOnStart
-      value: 2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156112957375388465, guid: d35fef751347b644e82e15e9d2a9427b,
+        type: 3}
+      propertyPath: cooldown
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1030285564776796506, guid: d35fef751347b644e82e15e9d2a9427b, type: 3}
