@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5450700201470840307}
   - component: {fileID: 5450700201470840305}
   - component: {fileID: 5450700201470840310}
+  - component: {fileID: 557744859}
   m_Layer: 0
   m_Name: PlayersLaser
   m_TagString: Untagged
@@ -118,3 +119,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   destroyDelay: 4
+
