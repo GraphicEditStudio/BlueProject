@@ -5,26 +5,21 @@ using UnityEngine;
 namespace BlueGame
 {
 
-     [CreateAssetMenu(menuName = "ObjectPooler", fileName = "NewObjectPooler")]
-    public class GeneralPoolerManagerScriptableObject : ScriptableObject
+    [CreateAssetMenu(menuName = "ObjectPoolerA", fileName = "NewObjectPoolerA")]
+   
+	public class MainPoolA : ScriptableObject
     {
 
         public GameObject poolableObject; //Drag here the GameObject you want to manage with the Pooling System
-
-        [Header("Options")]
-
-      
-        public int createOnStart = 0; //Instantiate a predefined number of GameObjects when the game starts
-
         private List<GameObject> objectsList = new List<GameObject>();
 
         
         void OnEnable()
         {
 
-             objectsList = new List<GameObject>(); // Clear the objectsList variable
+            objectsList = new List<GameObject>(); // Clear the objectsList variable
             
-            if (createOnStart > 0) InitializePool(createOnStart); // this number of GameObjects is instantiated
+          	InitializePool(0);
         }
 
         public GameObject GetObject()
@@ -45,20 +40,14 @@ namespace BlueGame
             return newGo;
         }
 
-        
-        public int GetPoolSize() // The number of objects inside the Pool
-        {
-            return objectsList.Count;
-        }
-
-        
+         
          public int CountActiveObjects() // The numer of active objects.
         {
             int counter = 0;
             foreach (GameObject go in objectsList)
             {
                 
-                if (go != null && go.activeInHierarchy) counter++; // Count if the GameObject exists and is active
+                if (go != null && go.activeInHierarchy) counter++; 
             }
             return counter;
         }
@@ -72,7 +61,7 @@ namespace BlueGame
                 if (go != null) Destroy(go);
             }
             
-            objectsList.Clear(); // Clear 
+            objectsList.Clear(); 
         }
 
 
