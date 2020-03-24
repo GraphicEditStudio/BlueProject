@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9019721013778163897}
   - component: {fileID: 9019721013778163894}
-  - component: {fileID: 9019721013778163895}
   - component: {fileID: 9019721013778163896}
+  - component: {fileID: 2932701610970934902}
   m_Layer: 0
   m_Name: PlayersRocket
   m_TagString: Untagged
@@ -83,19 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9019721013778163895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9019721013778163892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7dd5a5251f33604db15f659aae475d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 500
 --- !u!50 &9019721013778163896
 Rigidbody2D:
   serializedVersion: 4
@@ -117,3 +104,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2932701610970934902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019721013778163892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dd5a5251f33604db15f659aae475d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  destroyDelay: 4

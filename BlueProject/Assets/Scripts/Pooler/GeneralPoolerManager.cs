@@ -7,12 +7,12 @@ namespace BlueGame
     public class GeneralPoolerManager : MonoBehaviour
     {
    
- 	    public GeneralPoolerManagerScriptableObject[] objectsPooler; //The array of Object Poolers.
+ 	    public MainPool[] objectsPooler; //The array of Object Poolers.
 
-        private static GeneralPoolerManagerScriptableObject[] _objectsPooler;
+        private static MainPool[] _objectsPooler;
         private static GeneralPoolerManager generalPoolerManager;
        
-	   public static GeneralPoolerManager Instance
+	    public static GeneralPoolerManager Instance
         {
             get
             {
@@ -45,9 +45,10 @@ namespace BlueGame
 
        
        
-         public static GeneralPoolerManagerScriptableObject GetObjectPooler(int index)  // Return the Object Pooler 
+        public static MainPool GetObjectPooler(int index)  // Return the Object Pooler 
         {
             if (index < _objectsPooler.Length) return _objectsPooler[index]; else return null;
+			
         }
 
 
