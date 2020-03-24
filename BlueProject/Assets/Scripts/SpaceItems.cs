@@ -8,7 +8,7 @@ public class SpaceItems : MonoBehaviour {
 
     private GameObject[] spaceitems;
 
-    private int maxspaceitems = 10;
+    private int maxspaceitems = 40;
     private float spawnRate = 1f;
     private float minSpawnY = -4f;
     private float maxSpawnY = 4f;

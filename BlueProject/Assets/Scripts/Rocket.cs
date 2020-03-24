@@ -4,32 +4,17 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    public float speed = 1;
+    public float speed;
     Rigidbody2D rb;
-	public float destroyDelay = 4f;
-	
     void Start()
     {
-        //Destroy(gameObject, 3f);
+        Destroy(gameObject, 3f);
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void OnEnable()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-    
-        Invoke("Deactivate", destroyDelay); // Deactivate this bullet after the specified seconds
-    }	
-   
-    void Update()
-    {
-        //rb.AddForce(speed * Time.fixedDeltaTime * Vector2.right);
-		rb.velocity = (speed * Vector2.right);
+        rb.AddForce(speed * Time.fixedDeltaTime * Vector2.right);
     }
-	
-	void Deactivate()
-    {
-       
-        gameObject.SetActive(false);  
-    }	
-	
 }

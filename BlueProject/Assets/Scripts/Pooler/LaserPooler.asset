@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b51acdb13569e4d85a2bf370341ff4, type: 3}
-  m_Name: PoolerB-Rocket
+  m_Script: {fileID: 11500000, guid: 6ce70cc67b64a934f8823b70424137d5, type: 3}
+  m_Name: LaserPooler
   m_EditorClassIdentifier: 
-  poolableObject: {fileID: 9019721013778163892, guid: 40a46d27812709d48bdf3e1bf9046306,
+  poolableObject: {fileID: 5450700201470840311, guid: e2d0ee125a2c7314aa1c4cc67de6d29e,
     type: 3}
+  createOnStart: 0
