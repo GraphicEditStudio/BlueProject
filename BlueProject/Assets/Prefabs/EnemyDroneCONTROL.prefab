@@ -91,8 +91,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2572951684259581624}
   - component: {fileID: 6237956023354058089}
-  - component: {fileID: 1768578622}
-  - component: {fileID: 1768578623}
   m_Layer: 0
   m_Name: EnemyDroneCONTROL
   m_TagString: Untagged
@@ -127,37 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5727bdf6caa8ff43af503986a90dec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moves:
-  - {fileID: 11400000, guid: 5baa67d995d6c144fa9ee51c2c3304f2, type: 2}
-  - {fileID: 11400000, guid: 6f2ed04db3437f34eaedb23c8f3286f1, type: 2}
-  - {fileID: 11400000, guid: 5baa67d995d6c144fa9ee51c2c3304f2, type: 2}
-  - {fileID: 11400000, guid: 503dbe66afc226f4392aa3930aff8d2f, type: 2}
-  - {fileID: 11400000, guid: 5baa67d995d6c144fa9ee51c2c3304f2, type: 2}
-  - {fileID: 11400000, guid: 6f2ed04db3437f34eaedb23c8f3286f1, type: 2}
---- !u!114 &1768578622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280428161771171284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe6be3290ac5ce04d843c0e81f2f1bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthpoints: 0
-  maxhealtpoints: 0
---- !u!65 &1768578623
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280428161771171284}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  moves: []
