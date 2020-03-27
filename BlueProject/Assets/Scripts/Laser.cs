@@ -5,32 +5,29 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
 	public float speed = 1;
-    Rigidbody2D rb;
+    [SerializeField]
+    private Rigidbody2D rb;
     public float destroyDelay = 4f;
-
+    private bool stillRunning = false; //to check if the coroutine is stil running
 	void Start()
     {
-        //Destroy(gameObject, 3f);
         rb = GetComponent<Rigidbody2D>();
-        //rb.velocity = (speed * Vector2.right);
     }
 	
     void OnEnable()
     {
-        
-        Invoke("Deactivate", destroyDelay); // Deactivate this bullet after the specified seconds
+        if (stillRunning) StopCoroutine("Deactivate");
+        StartCoroutine(Deactivate(destroyDelay)); // Deactivate this bullet after the specified seconds
+        rb.velocity = (speed * Vector2.right);
     }	
 	
-	void Update()
+    IEnumerator Deactivate(float delay)
     {
-         //transform.Translate(Vector3.forward * speed * Time.deltaTime); // Move the bullet forwards
-		rb.velocity = (speed * Vector2.right);
-    }
-	
-	void Deactivate()
-    {
-       
-        gameObject.SetActive(false);  
+        stillRunning = true;
+        yield return new WaitForSeconds(delay);
+        gameObject.SetActive(false);
+        stillRunning = false;
+        yield return null;
     }
 	
 	

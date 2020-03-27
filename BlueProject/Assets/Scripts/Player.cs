@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Core;
 
 public class Player : MonoBehaviour
 {
+    public float shieldDuration;
+    public GameObject shield;
 
+    private Health playerHealth;
     public float speed = 12f;
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     private Vector2 screenTop;
     private Vector2 screenBottom;
@@ -19,14 +23,17 @@ public class Player : MonoBehaviour
     private float shipY;
     private float shipX;
 
+    private bool shieldActive=false;
+
     // Use this for initialization
     void Start()
     {
+        playerHealth = GetComponent<Health>();
         rb = GetComponent<Rigidbody2D>();
-        this.screenBottom = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
-        this.screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        this.shipHeight = transform.localScale.y / 2;
-        this.shipWidth = transform.localScale.x / 2;
+        screenBottom = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
+        screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        shipHeight = transform.localScale.y / 2;
+        shipWidth = transform.localScale.x / 2;
     }
 
     // Update is called once per frame
@@ -83,12 +90,25 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D coll)
     {
         //Debug.Log(coll.gameObject.tag);
-        if (coll.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag == "Enemy" && !shieldActive)
         {
-            GameController.instance.PlayerCrash();
-            this.GetComponent<Animator>().CrossFade("Explosion", 0);
-            //this.gameObject.SetActive(false);
+            playerHealth.healthPoints--;
+            StartCoroutine(SetShield(shieldDuration));
+        }
+        if (playerHealth.healthPoints <= 0)
+        {
+            //GameController.instance.PlayerCrash();
+            //this.GetComponent<Animator>().CrossFade("Explosion", 0);
+            gameObject.SetActive(false);
         }
     }
-
+    IEnumerator SetShield(float duration)
+    {
+        shield.SetActive(true);
+        shieldActive = true;
+        yield return new WaitForSeconds(duration);
+        shieldActive = false;
+        shield.SetActive(false);
+        yield return null;
+    }
 }

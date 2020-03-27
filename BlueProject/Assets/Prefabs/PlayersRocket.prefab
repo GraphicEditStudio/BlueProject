@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 9019721013778163897}
   - component: {fileID: 9019721013778163894}
   - component: {fileID: 9019721013778163896}
+  - component: {fileID: 7528102091908952740}
   - component: {fileID: 2932701610970934902}
+  - component: {fileID: 5717265542674280204}
   m_Layer: 0
   m_Name: PlayersRocket
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 9019721013778163892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20785, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -104,6 +106,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7528102091908952740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019721013778163892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060ed9faf12bb844d95b68e03d9cc9f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  damage: 2
 --- !u!114 &2932701610970934902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,5 +132,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dd5a5251f33604db15f659aae475d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  destroyDelay: 4
+  speed: 300
+  rb: {fileID: 9019721013778163896}
+  destroyDelay: 1.75
+--- !u!70 &5717265542674280204
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019721013778163892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.025238995, y: -0.0000000030087222}
+  m_Size: {x: 1.5681868, y: 0.19126214}
+  m_Direction: 1

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BlueGame;
+using Core.Combat;
 
 public class ShootRocket : MonoBehaviour
 {
@@ -9,23 +10,19 @@ public class ShootRocket : MonoBehaviour
 	public int ammo;
 	public float cooldown;
 	
-	KeyCode rocket = KeyCode.Space;
+    [SerializeField]
+	private KeyCode rocket = KeyCode.Space;
 	
 	float shootTime = 0;
 	
-	//public Vector2 initForce;
- 
-	public int rocketOnStart = 0; // The number of rocket to immediately instantiate when the game starts
-	private MainPoolB rocketPooler;	
+	public Vector2 initForce;
+
+	private PoolerManager pooler;	
 	
     void Start()
     {
-        
-        rocketPooler = GeneralPoolerManagerB.GetObjectPooler(0); // Pooler Manager 
-		
-        if (rocketOnStart > 0) rocketPooler.InitializePool(rocketOnStart); //how many bullets
-    }	
-	
+        pooler = PoolerManager.instance; // Pooler Manager 
+    }
 	
     void Update()
     {
@@ -34,12 +31,11 @@ public class ShootRocket : MonoBehaviour
             if (Time.time > shootTime + cooldown)
             {
                 shootTime = Time.time;
-                
-				//Instantiate(rocketPrefab, transform).GetComponent<Rigidbody2D>().AddForce(initForce, ForceMode2D.Impulse);
 				
-				GameObject myRocket = rocketPooler.GetObject(); // Pooling System to create or reuse a rocket
-			
-				myRocket.transform.position = transform.position; // put this rocket where the player is located
+				GameObject myRocket = pooler.Spawn("PRocket", transform.position, Quaternion.identity); // Pooling System to create or reuse a rocket
+                
+                myRocket.GetComponent<Projectile>().parent = transform.parent.gameObject;
+                myRocket.GetComponent<Rigidbody2D>().AddForce(initForce, ForceMode2D.Impulse);
 			
                 ammo--;
             }
