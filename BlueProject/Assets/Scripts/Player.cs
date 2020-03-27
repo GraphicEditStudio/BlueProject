@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Core;
 
 public class Player : MonoBehaviour
 {
+    public float shieldDuration;
+    public GameObject shield;
 
+    private Health playerHealth;
     public float speed = 12f;
     private Rigidbody2D rb;
 
@@ -19,9 +23,12 @@ public class Player : MonoBehaviour
     private float shipY;
     private float shipX;
 
+    private bool shieldActive=false;
+
     // Use this for initialization
     void Start()
     {
+        playerHealth = GetComponent<Health>();
         rb = GetComponent<Rigidbody2D>();
         screenBottom = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
         screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
@@ -83,12 +90,25 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D coll)
     {
         //Debug.Log(coll.gameObject.tag);
-        if (coll.gameObject.tag == "Enemy")
+        if (coll.gameObject.tag == "Enemy" && !shieldActive)
         {
-            GameController.instance.PlayerCrash();
+            playerHealth.healthPoints--;
+            StartCoroutine(SetShield(shieldDuration));
+        }
+        if (playerHealth.healthPoints <= 0)
+        {
+            //GameController.instance.PlayerCrash();
             //this.GetComponent<Animator>().CrossFade("Explosion", 0);
             gameObject.SetActive(false);
         }
     }
-
+    IEnumerator SetShield(float duration)
+    {
+        shield.SetActive(true);
+        shieldActive = true;
+        yield return new WaitForSeconds(duration);
+        shieldActive = false;
+        shield.SetActive(false);
+        yield return null;
+    }
 }

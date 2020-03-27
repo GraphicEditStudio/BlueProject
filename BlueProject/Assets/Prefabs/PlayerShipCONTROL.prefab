@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069664a2c9dd61d4ca8de2642a5e595e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shieldDuration: 1
+  shield: {fileID: 3743869059860946831}
   speed: 1500
 --- !u!50 &5567224576741245701
 Rigidbody2D:
@@ -291,11 +293,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2014061451820001130, guid: eee0e99719fac7e4887508efd9e5bd7f,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014061451820001130, guid: eee0e99719fac7e4887508efd9e5bd7f,
-        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -364,8 +361,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShieldCONTROL
       objectReference: {fileID: 0}
+    - target: {fileID: 7855205857622097323, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee0e99719fac7e4887508efd9e5bd7f, type: 3}
+--- !u!1 &3743869059860946831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7855205857622097323, guid: eee0e99719fac7e4887508efd9e5bd7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6843124015666012708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4973323299908896078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2014061451820001130, guid: eee0e99719fac7e4887508efd9e5bd7f,
