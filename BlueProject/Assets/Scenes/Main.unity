@@ -433,7 +433,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6939805325836489108}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1156363468
+--- !u!114 &1156363473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -700,11 +700,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 21093653834913781, guid: d35fef751347b644e82e15e9d2a9427b,
-        type: 3}
-      propertyPath: speed
-      value: 1500
-      objectReference: {fileID: 0}
     - target: {fileID: 811510611008286367, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: rocketOnStart
@@ -729,6 +724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: initForce.x
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743869059860946831, guid: d35fef751347b644e82e15e9d2a9427b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6192481589066591899, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
