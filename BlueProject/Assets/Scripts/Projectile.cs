@@ -8,9 +8,9 @@ namespace Core.Combat
     public class Projectile : MonoBehaviour
     {
         //set parent when launching the projectile
-        [HideInInspector] public GameObject parent;      
-        public float speed=10;
-        public float damage=10;               
+        [HideInInspector] public GameObject parent;
+        public float damage = 1;          
+        /*  we don't need this because of pooling
         float jictimer = 0;
         public float lifeSpan = 5;             
         void Update()
@@ -24,27 +24,30 @@ namespace Core.Combat
             if (jictimer > lifeSpan)
             {
                 //just in case
-                //destroy after 5 seconds               
+                //destroy after 5 seconds
                 Destroy(this.gameObject);
             }
         }
+        */
         public void TranslateDamage(GameObject target, float attackPower)
         {
             var health = target.GetComponent<Health>();
             health.TakeDamage(attackPower);
         }
-        private void OnCollisionEnter(Collision target)
+        private void OnTriggerEnter2D(Collider2D target)
         {
             //don't collide with enemy
-            if ((target.gameObject.tag == "Enemy" && parent.tag == "Player") || (target.gameObject.tag == "Player" && parent.tag == "Enemy"))
+            if ((target.tag == "Enemy" && parent.tag == "Player") || (target.tag == "Player" && parent.tag == "Enemy"))
             {
-                TranslateDamage(target.gameObject, damage);                
+                TranslateDamage(target.gameObject, damage);
             }
-            Destroy(gameObject);
-        }       
-        private void OnDestroy()
+            if(!target.CompareTag(parent.tag))Hit();
+            //Destroy(gameObject); no need to destroy
+        }
+        private void Hit()
         {
             //explosion or damage effect
+            gameObject.SetActive(false);
         }
        
     }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5567224576741245701}
   m_Layer: 0
   m_Name: ShipA
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo: 4
   cooldown: 0.6
-  rocketOnStart: 4
+  rocket: 32
+  initForce: {x: 0, y: 0}
 --- !u!1 &6939805325973547316
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo: 4
   cooldown: 0.1
+  laser: 323
   laserOnStart: 4
 --- !u!1001 &6843124015666012708
 PrefabInstance:
@@ -346,11 +348,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2375216859887898568, guid: eee0e99719fac7e4887508efd9e5bd7f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 2375216859887898568, guid: eee0e99719fac7e4887508efd9e5bd7f,
         type: 3}

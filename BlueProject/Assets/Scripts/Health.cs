@@ -15,20 +15,24 @@ namespace Core
     }
     internal class Health : MonoBehaviour
     {
-        public float healthpoints;
-        public float maxhealtpoints;       
+        public float healthPoints;
+        public float maxHealthPoints;       
         [HideInInspector] bool godMode;       
         public delegate void SomeBodyDiedEventHandler(ObjectRef refe);
         //subscribe to this event to get notification on death of object
         public event SomeBodyDiedEventHandler DieMOFO;       
         private bool died;
+
+        /*
+         * it's more reliable to set in the inspector
         private void Awake()
         {
             healthpoints = 100;
             maxhealtpoints = 100;           
             godMode = false;
             died = false;
-        }      
+        }     
+        I don't think we need godmode *yet*
         public void SetGodMode(bool stat)
         {
             if (gameObject.tag == "Player")
@@ -36,16 +40,13 @@ namespace Core
                 godMode = stat;
             }
         }
-        private void Update()
-        {
-           
-        }
-        public void TakeDamage(float damage, GameObject caller = null)
+        */
+        public void TakeDamage(float damage) //, GameObject caller = null) explain why we neeed this?
         {
             if (!godMode && !died)
             {
-                healthpoints = (healthpoints - damage) > 0 ? (healthpoints - damage) : 0;
-                if (healthpoints <= 0)
+                healthPoints = (healthPoints - damage) > 0 ? (healthPoints - damage) : 0;
+                if (healthPoints <= 0)
                 {
                     died = true;
                     Died();
@@ -57,26 +58,28 @@ namespace Core
         {
             //last location can be used for drop location
             //I originally used this event for chest drops on a hack and slash game
+            /* we can uncomment this later
             DieMOFO(new ObjectRef()
             {
                 tag = gameObject.tag,
                 DropRateBonus = 0,
                 lastLocation = transform.position
             });
-           //disable movement
-           //disable animations
-
+            */
+            //disable movement
+            //disable animations
+            gameObject.SetActive(false);
         }
         //heals the gameobject
         public void Heal(float extrahealth)
         {
-            healthpoints = (healthpoints + extrahealth) < maxhealtpoints ? (healthpoints + extrahealth) : maxhealtpoints;
+            healthPoints = (healthPoints + extrahealth) < maxHealthPoints ? (healthPoints + extrahealth) : maxHealthPoints;
         }
         public bool HealthCheck(float percent)
         {
-            var min = (maxhealtpoints - (maxhealtpoints * (percent + 3)) / 100);
-            var max = (maxhealtpoints - (maxhealtpoints * (percent - 10)) / 100);
-            if (healthpoints < max && healthpoints >= min)
+            var min = (maxHealthPoints - (maxHealthPoints * (percent + 3)) / 100);
+            var max = (maxHealthPoints - (maxHealthPoints * (percent - 10)) / 100);
+            if (healthPoints < max && healthPoints >= min)
             {
                 return true;
             }

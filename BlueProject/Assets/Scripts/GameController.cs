@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour {
         StartCoroutine("ProgressiveClear");
     }
     private void Update() {
-        if (this.isDead && Input.GetButtonDown("Jump")) {
+        if (this.isDead && Input.GetKeyDown(KeyCode.KeypadEnter)) {
             //...reload the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

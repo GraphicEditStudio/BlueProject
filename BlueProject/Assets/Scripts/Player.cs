@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 
     public float speed = 12f;
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     private Vector2 screenTop;
     private Vector2 screenBottom;
@@ -23,10 +23,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        this.screenBottom = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
-        this.screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        this.shipHeight = transform.localScale.y / 2;
-        this.shipWidth = transform.localScale.x / 2;
+        screenBottom = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
+        screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        shipHeight = transform.localScale.y / 2;
+        shipWidth = transform.localScale.x / 2;
     }
 
     // Update is called once per frame
@@ -86,8 +86,8 @@ public class Player : MonoBehaviour
         if (coll.gameObject.tag == "Enemy")
         {
             GameController.instance.PlayerCrash();
-            this.GetComponent<Animator>().CrossFade("Explosion", 0);
-            //this.gameObject.SetActive(false);
+            //this.GetComponent<Animator>().CrossFade("Explosion", 0);
+            gameObject.SetActive(false);
         }
     }
 
