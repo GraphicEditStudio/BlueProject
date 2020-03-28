@@ -92,14 +92,8 @@ public class Player : MonoBehaviour
         //Debug.Log(coll.gameObject.tag);
         if (coll.gameObject.tag == "Enemy" && !shieldActive)
         {
-            playerHealth.healthPoints--;
-            StartCoroutine(SetShield(shieldDuration));
-        }
-        if (playerHealth.healthPoints <= 0)
-        {
-            //GameController.instance.PlayerCrash();
-            //this.GetComponent<Animator>().CrossFade("Explosion", 0);
-            gameObject.SetActive(false);
+            playerHealth.TakeDamage(1);
+            if (playerHealth.healthPoints > 0) StartCoroutine(SetShield(shieldDuration));
         }
     }
     IEnumerator SetShield(float duration)

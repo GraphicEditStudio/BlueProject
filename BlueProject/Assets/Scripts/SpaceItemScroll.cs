@@ -5,14 +5,17 @@ using UnityEngine;
 public class SpaceItemScroll : MonoBehaviour {
 
     private Rigidbody2D rbSpaceItem;
-    private int minSpeed = 1;
-    private int maxSpeed = 15;
+    private float minSpeed = 5;
+    private float maxSpeed = 15;
 
 
-	// Use this for initialization
-	void Start () {
-        int speed = Random.Range(minSpeed, maxSpeed);
+    // Use this for initialization
+    private void Awake()
+    {
         rbSpaceItem = GetComponent<Rigidbody2D>();
+    }
+    void OnEnable () {
+        float speed = Random.Range(minSpeed, maxSpeed);
         rbSpaceItem.velocity = new Vector2(-speed, 0);
 	}
 	

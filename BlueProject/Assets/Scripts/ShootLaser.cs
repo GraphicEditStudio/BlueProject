@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using Core.Combat;
 using UnityEngine;
 using BlueGame;
 
 public class ShootLaser : MonoBehaviour
 {
-    //public GameObject laserPrefab;
     public int ammo;
     public float cooldown;
     
@@ -34,6 +34,7 @@ public class ShootLaser : MonoBehaviour
 
                 GameObject myLaser = pooler.Spawn("PLaser", transform.position, Quaternion.identity);  // Pooling System to create or reuse a laser
                 myLaser.GetComponent<Projectile>().parent = transform.parent.gameObject;
+                AudioManager.instance.Play("LaserShoot");
                 ammo--;
             }
         }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5717265542674280204}
   m_Layer: 0
   m_Name: PlayersRocket
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,8 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   damage: 3
-  hitSoundName: Explosion
-  onHitFX: {fileID: 6449292610521681355, guid: 237a98db9af41284ba825773181a696e, type: 3}
+  hitSFXName: Explosion
+  hitVFXName: ExplosionFX
 --- !u!114 &2932701610970934902
 MonoBehaviour:
   m_ObjectHideFlags: 0
