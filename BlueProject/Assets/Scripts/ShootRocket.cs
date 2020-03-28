@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 using BlueGame;
 using Core.Combat;
@@ -36,7 +37,8 @@ public class ShootRocket : MonoBehaviour
                 
                 myRocket.GetComponent<Projectile>().parent = transform.parent.gameObject;
                 myRocket.GetComponent<Rigidbody2D>().AddForce(initForce, ForceMode2D.Impulse);
-			
+                AudioManager.instance.Play("RocketShoot");
+
                 ammo--;
             }
         }

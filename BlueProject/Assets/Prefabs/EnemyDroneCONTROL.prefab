@@ -142,6 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 5
   maxHealthPoints: 5
+  diedVFXName: ExplosionFX
+  diedSFXName: EnemyDeath
 --- !u!60 &7863930994420588534
 PolygonCollider2D:
   m_ObjectHideFlags: 0

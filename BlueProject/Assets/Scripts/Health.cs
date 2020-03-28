@@ -1,29 +1,36 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using BlueGame;
 using UnityEngine;
 using Audio;
 
 
 namespace Core
 {
-    public class ObjectRef
+    /*public class ObjectRef
     {
         public string tag { get; set; }
         public Vector3 lastLocation { get; set; }
         public float DropRateBonus { get; set; }
 
-    }
+    }*/
     internal class Health : MonoBehaviour
     {
+        [HideInInspector]
         public float healthPoints;
-        public float maxHealthPoints;       
-        [HideInInspector] bool godMode;       
-        public delegate void SomeBodyDiedEventHandler(ObjectRef refe);
+        public float maxHealthPoints;
+        //[HideInInspector] bool godMode;       
+        //public delegate void SomeBodyDiedEventHandler(ObjectRef refe);
         //subscribe to this event to get notification on death of object
-        public event SomeBodyDiedEventHandler DieMOFO;       
+        //public event SomeBodyDiedEventHandler DieMOFO;       
+        public string diedVFXName;
+        public string diedSFXName;
         private bool died;
-
+        private void Awake()
+        {
+            healthPoints = maxHealthPoints;
+        }
         /*
          * it's more reliable to set in the inspector
         private void Awake()
@@ -42,9 +49,9 @@ namespace Core
             }
         }
         */
-        public void TakeDamage(float damage) //, GameObject caller = null) explain why we neeed this?
+        public void TakeDamage(float damage) //, GameObject caller = null) explain why we neeed caller?
         {
-            if (!godMode && !died)
+            if (!died)
             {
                 healthPoints = (healthPoints - damage) > 0 ? (healthPoints - damage) : 0;
                 if (healthPoints <= 0)
@@ -69,10 +76,8 @@ namespace Core
             */
             //disable movement
             //disable animations
-            if (gameObject.CompareTag("Enemy"))
-            {
-                AudioManager.instance.Play("EnemyDeath");
-            }
+            if (diedVFXName.Length != 0) PoolerManager.instance.Spawn(diedVFXName, transform.position, Quaternion.identity).transform.SetParent(null);
+            if (diedSFXName.Length != 0) AudioManager.instance.Play(diedSFXName);
             gameObject.SetActive(false);
         }
         //heals the gameobject

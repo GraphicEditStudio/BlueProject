@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6864727211536247236}
   m_Layer: 0
   m_Name: PlayersLaser
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   damage: 1
-  hitSoundName: LaserHit
-  onHitFX: {fileID: 0}
+  hitSFXName: LaserHit
+  hitVFXName: 
 --- !u!70 &6864727211536247236
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
