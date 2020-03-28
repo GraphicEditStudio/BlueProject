@@ -14,14 +14,11 @@ namespace BlueGame
             public int size;
         }
         public static PoolerManager instance;
+        public List<Pool> poolList;
+        public Dictionary<string, Queue<GameObject>> poolDictionary;
         private void Awake()
         {
             instance = this;
-        }
-        public List<Pool> poolList;
-        public Dictionary<string, Queue<GameObject>> poolDictionary;
-        private void Start()
-        {
             GameObject obj;
             Queue<GameObject> objPool;
             int poolSize;

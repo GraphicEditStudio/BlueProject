@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03e7aadf2d6dbee499b721951af3531c, type: 3}
-  m_Name: HardLeft45
+  m_Name: HardRight45
   m_EditorClassIdentifier: 
-  radius: 0.1
-  angle: 45
-  duration: 0.1
+  radius: -0.1
+  angle: -45
+  duration: 0.2

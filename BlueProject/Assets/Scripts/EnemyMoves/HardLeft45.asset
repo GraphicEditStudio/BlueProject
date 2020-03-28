@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.1
   angle: 45
-  duration: 0.1
+  duration: 0.2

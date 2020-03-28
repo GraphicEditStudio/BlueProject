@@ -1,19 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BlueGame;
 
 public class SpaceItems : MonoBehaviour {
+    PoolerManager pooler;
+    GameObject spaceitem;
 
-    public GameObject spaceitemPrefab;
-
-    private GameObject[] spaceitems;
-
-    private int maxspaceitems = 10;
-    private float spawnRate = 1f;
+    public float spawnRate = 2f;
     private float minSpawnY = -4f;
     private float maxSpawnY = 4f;
-    private float spawnX = 12.0f;
-    private int recentAstroid = 0;
+    private float spawnX = 10.5f;
 
     private float scaleMin = 0.10f;
     private float scaleMax = 1.0f;
@@ -26,11 +23,7 @@ public class SpaceItems : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Vector2 startPos = new Vector2(20, 20);
-        spaceitems = new GameObject[maxspaceitems];
-        for (int i = 0; i < maxspaceitems; i++) {
-            spaceitems[i] = Instantiate(spaceitemPrefab, startPos, Quaternion.identity);
-        }
+        pooler = PoolerManager.instance;
         StartCoroutine(SpawnItems(spawnRate));
     }
     IEnumerator SpawnItems(float waitTime)
@@ -41,16 +34,8 @@ public class SpaceItems : MonoBehaviour {
             adjScale = Random.Range(scaleMin, scaleMax);
             adjRotation = Random.Range(rotateMin, rotateMax);
 
-            spaceitems[recentAstroid].transform.position = new Vector2(spawnX, spawnY); // set spawn position
-            spaceitems[recentAstroid].transform.localScale = new Vector3(adjScale, adjScale, 1); // change items scale 
-            spaceitems[recentAstroid].transform.Rotate(0, 0, adjRotation); // rotate items 
-
-            recentAstroid++;
-
-            if (recentAstroid >= maxspaceitems)
-            {
-                recentAstroid = 0;
-            }
+            spaceitem = pooler.Spawn("SpaceItems", new Vector2(spawnX, spawnY), Quaternion.Euler(0, 0, adjRotation));
+            spaceitem.transform.localScale = new Vector3(adjScale, adjScale, 1);
             yield return new WaitForSeconds(waitTime);
         }
     }
