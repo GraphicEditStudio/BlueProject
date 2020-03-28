@@ -78,7 +78,7 @@ namespace Core
             //disable animations
             if (diedVFXName.Length != 0) PoolerManager.instance.Spawn(diedVFXName, transform.position, Quaternion.identity).transform.SetParent(null);
             if (diedSFXName.Length != 0) AudioManager.instance.Play(diedSFXName);
-            gameObject.SetActive(false);
+            // gameObject.SetActive(false);  moved to player.cs collider2d
         }
         //heals the gameobject
         public void Heal(float extrahealth)

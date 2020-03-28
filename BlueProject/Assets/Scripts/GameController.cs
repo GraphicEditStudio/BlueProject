@@ -41,9 +41,10 @@ public class GameController : MonoBehaviour {
         StartCoroutine("ProgressiveClear");
     }
     private void Update() {
-        if (this.isDead && Input.GetKeyDown(KeyCode.KeypadEnter)) {
+        if (this.isDead && Input.GetKeyDown(KeyCode.Return)) {
             //...reload the current scene.
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(1);
+
         }
     }
 }
