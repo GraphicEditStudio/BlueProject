@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   damage: 1
+  hitSoundName: LaserHit
+  onHitFX: {fileID: 0}
 --- !u!70 &6864727211536247236
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

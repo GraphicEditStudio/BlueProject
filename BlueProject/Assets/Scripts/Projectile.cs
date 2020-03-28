@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Audio;
 using UnityEngine;
 
 namespace Core.Combat
@@ -9,7 +7,10 @@ namespace Core.Combat
     {
         //set parent when launching the projectile
         [HideInInspector] public GameObject parent;
-        public float damage = 1;          
+        public float damage = 1;
+        public string hitSoundName;
+        public GameObject onHitFX;
+
         /*  we don't need this because of pooling
         float jictimer = 0;
         public float lifeSpan = 5;             
@@ -37,9 +38,14 @@ namespace Core.Combat
         private void OnTriggerEnter2D(Collider2D target)
         {
             //don't collide with enemy
-            if ((target.tag == "Enemy" && parent.tag == "Player") || (target.tag == "Player" && parent.tag == "Enemy"))
+            if ((target.CompareTag("Enemy") && parent.CompareTag("Player")) || (target.CompareTag("Player") && parent.CompareTag("Enemy")))
             {
                 TranslateDamage(target.gameObject, damage);
+            }
+            if (target.CompareTag("ScreenBorder"))
+            {
+                gameObject.SetActive(false);
+                return;
             }
             if(!target.CompareTag(parent.tag))Hit();
             //Destroy(gameObject); no need to destroy
@@ -47,6 +53,8 @@ namespace Core.Combat
         private void Hit()
         {
             //explosion or damage effect
+            if (onHitFX != null) Instantiate(onHitFX, transform).transform.SetParent(null);
+            AudioManager.instance.Play(hitSoundName);
             gameObject.SetActive(false);
         }
        

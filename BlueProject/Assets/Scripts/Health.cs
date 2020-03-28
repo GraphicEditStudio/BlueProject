@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Audio;
 
 
 namespace Core
@@ -68,6 +69,10 @@ namespace Core
             */
             //disable movement
             //disable animations
+            if (gameObject.CompareTag("Enemy"))
+            {
+                AudioManager.instance.Play("EnemyDeath");
+            }
             gameObject.SetActive(false);
         }
         //heals the gameobject
