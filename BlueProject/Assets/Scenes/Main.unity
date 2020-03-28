@@ -172,11 +172,7 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 7
-=======
-      value: 6
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -546,11 +542,7 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 11
-=======
-      value: 10
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -725,11 +717,7 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 10
-=======
-      value: 9
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -917,11 +905,7 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 12
-=======
-      value: 11
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -2033,7 +2017,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< refs/remotes/origin/master
     - target: {fileID: 71294385751511373, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_Intensity
@@ -2109,8 +2092,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.76
       objectReference: {fileID: 0}
-=======
->>>>>>> LevelTest
     - target: {fileID: 5246412285089308566, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_Name
@@ -2119,7 +2100,6 @@ PrefabInstance:
     - target: {fileID: 5246412285089308566, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_IsActive
-<<<<<<< refs/remotes/origin/master
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5462008850499912054, guid: 429dee1e540ab894ab56eb6081685fe5,
@@ -2181,14 +2161,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.67
-=======
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
@@ -2198,11 +2170,7 @@ PrefabInstance:
     - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_LocalPosition.z
-<<<<<<< refs/remotes/origin/master
       value: -1.53
-=======
-      value: 0
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
@@ -2227,11 +2195,7 @@ PrefabInstance:
     - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 5
-=======
-      value: 14
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
@@ -2263,7 +2227,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.2446
       objectReference: {fileID: 0}
-<<<<<<< refs/remotes/origin/master
     - target: {fileID: 7619302563500371582, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_Range
@@ -2299,8 +2262,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.14
       objectReference: {fileID: 0}
-=======
->>>>>>> LevelTest
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429dee1e540ab894ab56eb6081685fe5, type: 3}
 --- !u!1001 &2075171733
@@ -2353,11 +2314,7 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 9
-=======
-      value: 8
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -2529,11 +2486,7 @@ PrefabInstance:
     - target: {fileID: 6939805325973547318, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 6
-=======
-      value: 5
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 6939805325973547318, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
@@ -2633,11 +2586,7 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 8
-=======
-      value: 7
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -2834,11 +2783,7 @@ PrefabInstance:
     - target: {fileID: 8371540879761324924, guid: ee44a805f35cfdf439eb367fcb5cc506,
         type: 3}
       propertyPath: m_RootOrder
-<<<<<<< refs/remotes/origin/master
       value: 14
-=======
-      value: 12
->>>>>>> LevelTest
       objectReference: {fileID: 0}
     - target: {fileID: 8371540879761324924, guid: ee44a805f35cfdf439eb367fcb5cc506,
         type: 3}
