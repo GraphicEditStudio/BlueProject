@@ -45,8 +45,20 @@ TagManager:
   - name: Background
     uniqueID: 1677804527
     locked: 0
+  - name: Background 2
+    uniqueID: 3678395697
+    locked: 0
   - name: Midground
     uniqueID: 2991361703
+    locked: 0
+  - name: Enemies
+    uniqueID: 2327806057
+    locked: 0
+  - name: Explosions
+    uniqueID: 3493172219
+    locked: 0
+  - name: Weapons
+    uniqueID: 1853460863
     locked: 0
   - name: Player
     uniqueID: 1901165537
