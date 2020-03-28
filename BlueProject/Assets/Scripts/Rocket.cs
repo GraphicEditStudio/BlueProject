@@ -22,7 +22,7 @@ public class Rocket : MonoBehaviour
         rb.velocity = Vector2.zero;
     }	
    
-    void Update()
+    void FixedUpdate()
     {
         rb.AddForce(speed * Time.fixedDeltaTime * Vector2.right);
     }

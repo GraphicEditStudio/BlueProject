@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 
 public class Laser : MonoBehaviour
@@ -19,6 +20,7 @@ public class Laser : MonoBehaviour
         if (stillRunning) StopCoroutine("Deactivate");
         StartCoroutine(Deactivate(destroyDelay)); // Deactivate this bullet after the specified seconds
         rb.velocity = (speed * Vector2.right);
+        AudioManager.instance.Play("LaserShoot");
     }	
 	
     IEnumerator Deactivate(float delay)
