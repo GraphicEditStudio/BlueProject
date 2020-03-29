@@ -49,8 +49,9 @@ public class GameController : MonoBehaviour {
             if (!isPaused)
             {
                 Time.timeScale = 0;
-                isPaused = true;
+                isPaused = true; // For some reason the enemies don't pause when this happens 
                 PauseMenu.GetComponent<Canvas>().enabled = false;
+
             }
             else
             {
