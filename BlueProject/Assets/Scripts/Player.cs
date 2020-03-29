@@ -105,6 +105,7 @@ public class Player : MonoBehaviour
             if (playerHealth.healthPoints <= 0)
             {
                 controllerCommunicator.isDead = true;
+                controllerCommunicator.PlayerCrash();
                 playerHealth.Died();
             }
 

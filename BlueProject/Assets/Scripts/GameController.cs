@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
     public static GameController instance;
     public GameObject PauseMenu;
     public bool isDead = false;
+    public bool displayingMessage = false;
     public bool isPaused = false;
     public Text txt;
     public float displayDelay = 0.45f;
@@ -31,6 +32,9 @@ public class GameController : MonoBehaviour {
         if(instance == null) {
             instance = this;
         }
+        if(txt == null){
+            txt = GameObject.Find("DisplayText");
+        }
         
     }
     public void PlayerCrash() {
@@ -50,6 +54,7 @@ public class GameController : MonoBehaviour {
             {
                 Time.timeScale = 0;
                 isPaused = true; // For some reason the enemies don't pause when this happens 
+                PauseMenu.SetActive(true);
                 PauseMenu.GetComponent<Canvas>().enabled = false;
 
             }
@@ -65,8 +70,9 @@ public class GameController : MonoBehaviour {
             //...reload the current scene.
             SceneManager.LoadScene(1);
         }
-        if(this.isDead){
+        if(this.isDead && !this.displayingMessage){
             PlayerCrash();
+            displayingMessage = true;
         }
 
     }
