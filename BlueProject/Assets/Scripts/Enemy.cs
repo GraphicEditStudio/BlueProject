@@ -6,11 +6,13 @@ namespace Core
 {
     public class Enemy : MonoBehaviour
     {
-        private Health healthObject;
+        public Health healthObject;
+        public EnemyMovement movementObject;
         // Start is called before the first frame update
         void Start()
         {
             healthObject = GetComponent<Health>();
+            movementObject = GetComponent<EnemyMovement>();
         }
 
         // Update is called once per frame
@@ -21,6 +23,7 @@ namespace Core
                 healthObject.Died();
             }
         }
+        
     }
 }
 

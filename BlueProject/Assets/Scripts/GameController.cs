@@ -48,12 +48,12 @@ public class GameController : MonoBehaviour {
     }
     private void Update() {
 
-        if (Input.GetKeyDown(KeyCode.P) && !this.displayingMessage)
+        if (Input.GetKeyDown(KeyCode.Escape) && !this.displayingMessage)
         {
             if (!isPaused)
             {
-                Time.timeScale = 0;
-                isPaused = true; // For some reason the enemies don't pause when this happens 
+                Time.timeScale = 0; // For some reason the enemies don't pause when this happens 
+                isPaused = true; 
                 PauseMenu.SetActive(true);
                 PauseMenu.GetComponent<Canvas>().enabled = false;
 

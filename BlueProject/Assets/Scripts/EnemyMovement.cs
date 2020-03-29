@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+namespace Core
+{
+    
 public class EnemyMovement : MonoBehaviour
 {
     public List<EnemyMoves> moves;
@@ -46,4 +48,6 @@ public class EnemyMovement : MonoBehaviour
         executeNextMove = true;
         yield return null;
     }
+}
+
 }
