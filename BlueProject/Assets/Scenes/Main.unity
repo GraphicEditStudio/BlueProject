@@ -27,9 +27,9 @@ RenderSettings:
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
-  m_HaloStrength: 0.592
+  m_HaloStrength: 0.729
   m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
+  m_FlareFadeSpeed: 3.14
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
@@ -48,7 +48,7 @@ LightmapSettings:
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
-    m_IndirectOutputScale: 1
+    m_IndirectOutputScale: 1.95
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 0
@@ -64,15 +64,16 @@ LightmapSettings:
     m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 1
+    m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000,
+      type: 0}
+    m_LightmapsBakeMode: 0
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 2
-    m_BakeBackend: 0
+    m_MixedBakeMode: 0
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -99,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 18e4ad719d3006747a11e781e17dd1a1,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -371,12 +372,12 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
-  far clip plane: 1000
+  near clip plane: 0
+  far clip plane: 100
   field of view: 61
   orthographic: 1
   orthographic size: 5
-  m_Depth: 0.1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -384,8 +385,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 0
-  m_HDR: 0
-  m_AllowMSAA: 0
+  m_HDR: 1
+  m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 0
@@ -1942,7 +1943,7 @@ MonoBehaviour:
   - tag: SpaceItems
     prefab: {fileID: 4769528128065914491, guid: cc2b1696475d4624bb5ccfd24a04109b,
       type: 3}
-    size: 20
+    size: 5
 --- !u!4 &1862769547
 Transform:
   m_ObjectHideFlags: 0
@@ -2142,6 +2143,21 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 5982611982125817318, guid: 429dee1e540ab894ab56eb6081685fe5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982611982125817318, guid: 429dee1e540ab894ab56eb6081685fe5,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2029516133
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982611982125817318, guid: 429dee1e540ab894ab56eb6081685fe5,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7054226343883743491, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2261,6 +2277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017010127452676823, guid: 429dee1e540ab894ab56eb6081685fe5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429dee1e540ab894ab56eb6081685fe5, type: 3}
@@ -2668,6 +2689,11 @@ PrefabInstance:
       propertyPath: scrollSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1038401105877791301, guid: ee44a805f35cfdf439eb367fcb5cc506,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1898060766922700166, guid: ee44a805f35cfdf439eb367fcb5cc506,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2745,6 +2771,21 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2.44
       objectReference: {fileID: 0}
+    - target: {fileID: 8190294923146759321, guid: ee44a805f35cfdf439eb367fcb5cc506,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190294923146759321, guid: ee44a805f35cfdf439eb367fcb5cc506,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8190294923146759321, guid: ee44a805f35cfdf439eb367fcb5cc506,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8371540879761324924, guid: ee44a805f35cfdf439eb367fcb5cc506,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2814,6 +2855,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScrollBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371540879761324926, guid: ee44a805f35cfdf439eb367fcb5cc506,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6263125043625418773, guid: ee44a805f35cfdf439eb367fcb5cc506, type: 3}
