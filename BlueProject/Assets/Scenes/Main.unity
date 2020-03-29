@@ -1120,13 +1120,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6069b3d8d7732b44785a46d192a1b8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winningTime: 0
+  reqTimeToWin: 19
   PauseMenu: {fileID: 1107053269}
   isDead: 0
   displayingMessage: 0
   isPaused: 0
   txt: {fileID: 1718009436}
-  displayDelay: 0.45
+  displayDelay: 0.25
 --- !u!114 &1035935655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,8 +1438,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035935652}
-        m_MethodName: 
+      - m_Target: {fileID: 1035935654}
+        m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -7,6 +7,7 @@ namespace Core
     public class EnemyMovement : MonoBehaviour
     {
         public List<EnemyMoves> moves;
+        public float enemySpeed = 1f;
         GameController controller;
         int currentMove = 0;
         bool executeNextMove = true;
@@ -21,11 +22,11 @@ namespace Core
                 executeNextMove = false;
                 if (moves[currentMove].angle == 0)
                 {
-                    StartCoroutine(Move(moves[currentMove].radius / moves[currentMove].duration * Time.fixedDeltaTime, Mathf.Abs(moves[currentMove].radius)));
+                    StartCoroutine(Move(moves[currentMove].radius / moves[currentMove].duration * enemySpeed * Time.fixedDeltaTime, Mathf.Abs(moves[currentMove].radius)));
                 }
                 else
                 {
-                    StartCoroutine(Move(transform.position - moves[currentMove].radius * transform.up, moves[currentMove].angle / moves[currentMove].duration * Time.fixedDeltaTime, Mathf.Abs(moves[currentMove].angle)));
+                    StartCoroutine(Move(transform.position - moves[currentMove].radius * transform.up, moves[currentMove].angle / moves[currentMove].duration * enemySpeed * Time.fixedDeltaTime, Mathf.Abs(moves[currentMove].angle)));
                 }
                 currentMove++;
                 if (currentMove >= moves.Count) currentMove = 0;
@@ -41,7 +42,7 @@ namespace Core
                 }
                 totalRotation -= Mathf.Abs(rotateAmount);
                 transform.RotateAround(point, Vector3.forward, rotateAmount);
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
             executeNextMove = true;
             yield return null;
@@ -56,7 +57,7 @@ namespace Core
                 }
                 totalDistance -= Mathf.Abs(distancePerFrame);
                 transform.Translate(Vector3.left * distancePerFrame);
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
             executeNextMove = true;
             yield return null;
