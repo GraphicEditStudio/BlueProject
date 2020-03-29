@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     void Start(){
         gameObject.SetActive(false);
-        gameObject.GetComponent<Renderer>();
+        gameObject.GetComponent<Renderer>().enabled = false;
     }
     public void playGame()
     {
