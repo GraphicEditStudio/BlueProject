@@ -6,6 +6,8 @@ using JetBrains.Annotations;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+
     public float shieldDuration;
     public GameObject shield;
 
@@ -29,6 +31,14 @@ public class Player : MonoBehaviour
 
     private bool shieldActive=false;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+    public int GetCurrentHP()
+    {
+        return playerHealth.healthPoints;
+    }
     // Use this for initialization
     void Start()
     {
@@ -39,6 +49,7 @@ public class Player : MonoBehaviour
         shipHeight = transform.localScale.y / 2;
         shipWidth = transform.localScale.x / 2;
         controllerCommunicator =  controller.GetComponent<GameController>();
+        DisplayStats.UpdateHealth();
     }
 
     // Update is called once per frame
@@ -98,6 +109,7 @@ public class Player : MonoBehaviour
         if (coll.gameObject.tag == "Enemy" && !shieldActive)
         {
             playerHealth.TakeDamage(1);
+            DisplayStats.UpdateHealth();
             if (playerHealth.healthPoints > 0)
             {
                 StartCoroutine(SetShield(shieldDuration));

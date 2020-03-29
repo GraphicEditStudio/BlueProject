@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2678429340488441272}
   - component: {fileID: 21093653834913781}
   - component: {fileID: 5567224576741245701}
+  - component: {fileID: 1790502381803552541}
   m_Layer: 0
   m_Name: ShipA
   m_TagString: Player
@@ -128,6 +129,7 @@ MonoBehaviour:
   shieldDuration: 1
   shield: {fileID: 3743869059860946831}
   speed: 1500
+  controller: {fileID: 0}
 --- !u!50 &5567224576741245701
 Rigidbody2D:
   serializedVersion: 4
@@ -149,6 +151,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1790502381803552541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979366631043918748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6daaf87aa21ab40aeb057792fb44f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 0
+  maxHealthPoints: 3
+  diedVFXName: ExplosionFX
+  diedSFXName: Explosion
 --- !u!1 &6563036454229069805
 GameObject:
   m_ObjectHideFlags: 0

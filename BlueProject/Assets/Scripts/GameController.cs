@@ -22,22 +22,24 @@ public class GameController : MonoBehaviour {
         if (!isDead) PlayerClear();
         yield return null;
     }
-    private IEnumerator Progressive(){
-        string temporaryText = "Game Over\nPress Enter to retry";
-        int len = temporaryText.Length;
-        for (int i = 0; i < len; i++){
-            txt.text += temporaryText[i];
-            yield return new WaitForSeconds(displayDelay);
+    IEnumerator DisplayText(string text, float waitTime, float delayPerLetter)
+    {
+        displayingMessage = true; //for now
+        yield return new WaitForSeconds(waitTime);
+     //   displayingMessage = true; put this here later
+        int len = text.Length;
+        for (int i = 0; i < len; i++)
+        {
+            txt.text += text[i];
+            yield return new WaitForSeconds(delayPerLetter);
         }
     }
-
-    private IEnumerator ProgressiveClear(){
-        string temporaryText = "You\nSurvived!\nTotal Enemy Killed:\n"+ enemyKilled+" / " + totalEnemy;
-        int len = temporaryText.Length;
-        for(int i = 0; i < len; i++){
-            txt.text += temporaryText[i];
-            yield return new WaitForSeconds(displayDelay/2);
-        }
+    IEnumerator ClearDisplay(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        txt.text = "";
+        displayingMessage = false;
+        yield return null;
     }
 
     private void Awake()
@@ -57,12 +59,14 @@ public class GameController : MonoBehaviour {
     }
     public void PlayerCrash() {
         // Display the Game Over Screen
-        StartCoroutine(Progressive());
+        StartCoroutine(DisplayText("Game Over\nPress Enter to retry", 0f, displayDelay));
 
     }
     public void PlayerClear(){
         // Displays the clear screen
-        StartCoroutine(ProgressiveClear());
+        StartCoroutine(DisplayText("You\nSurvived!", 0f, displayDelay / 2));
+        StartCoroutine(ClearDisplay(3.74f));
+        StartCoroutine(DisplayText("Total Enemy Killed:\n" + enemyKilled + " / " + totalEnemy + "\nPress Escape to go back.", 3.75f, displayDelay / 2));
     }
     private void Update() {
 
@@ -77,7 +81,6 @@ public class GameController : MonoBehaviour {
         }
         if(this.isDead && !this.displayingMessage){
             PlayerCrash();
-            displayingMessage = true;
         }
     }
     public void TogglePause()

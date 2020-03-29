@@ -18,8 +18,8 @@ namespace Core
     internal class Health : MonoBehaviour
     {
         [HideInInspector]
-        public float healthPoints;
-        public float maxHealthPoints;
+        public int healthPoints;
+        public int maxHealthPoints;
         //[HideInInspector] bool godMode;       
         //public delegate void SomeBodyDiedEventHandler(ObjectRef refe);
         //subscribe to this event to get notification on death of object
@@ -49,7 +49,7 @@ namespace Core
             }
         }
         */
-        public void TakeDamage(float damage) //, GameObject caller = null) explain why we neeed caller?
+        public void TakeDamage(int damage) //, GameObject caller = null) explain why we neeed caller?
         {
             if (!died)
             {
@@ -82,7 +82,7 @@ namespace Core
             gameObject.SetActive(false);
         }
         //heals the gameobject
-        public void Heal(float extrahealth)
+        public void Heal(int extrahealth)
         {
             healthPoints = (healthPoints + extrahealth) < maxHealthPoints ? (healthPoints + extrahealth) : maxHealthPoints;
         }

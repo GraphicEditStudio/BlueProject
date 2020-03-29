@@ -25,6 +25,7 @@ public class ShootRocket : MonoBehaviour
     {
         controller = GameController.instance;
         pooler = PoolerManager.instance; // Pooler Manager 
+        DisplayStats.UpdateRocketAmmo(ammo);
     }
 	
     void Update()
@@ -43,6 +44,7 @@ public class ShootRocket : MonoBehaviour
                 AudioManager.instance.Play("RocketShoot");
 
                 ammo--;
+                DisplayStats.UpdateRocketAmmo(ammo);
             }
         }
     }
