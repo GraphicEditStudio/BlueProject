@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
     public static GameController instance;
     public bool isDead = false;
+    public bool isPaused = false;
     public Text txt;
     public float displayDelay = 0.45f;
     private IEnumerator Progressive(){
@@ -40,6 +41,23 @@ public class GameController : MonoBehaviour {
         StartCoroutine("ProgressiveClear");
     }
     private void Update() {
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (!isPaused)
+            {
+                Time.timeScale = 0;
+                isPaused = true;
+
+            }
+            else
+            {
+                Time.timeScale = 1;
+                isPaused = false;
+            }
+        }
+
+
         if (this.isDead && Input.GetKeyDown(KeyCode.Return)) {
             //...reload the current scene.
             SceneManager.LoadScene(1);

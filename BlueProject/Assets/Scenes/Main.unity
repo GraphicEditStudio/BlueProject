@@ -760,6 +760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDead: 0
+  isPaused: 0
   txt: {fileID: 0}
   displayDelay: 0.45
 --- !u!114 &1035935655
