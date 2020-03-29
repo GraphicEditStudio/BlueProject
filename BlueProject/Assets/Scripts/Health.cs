@@ -57,12 +57,12 @@ namespace Core
                 if (healthPoints <= 0)
                 {
                     died = true;
-                    Died();
+                    //Died();
                 }
                 
             }
         }
-        private void Died()
+        public void Died()
         {
             //last location can be used for drop location
             //I originally used this event for chest drops on a hack and slash game
@@ -78,7 +78,7 @@ namespace Core
             //disable animations
             if (diedVFXName.Length != 0) PoolerManager.instance.Spawn(diedVFXName, transform.position, Quaternion.identity).transform.SetParent(null);
             if (diedSFXName.Length != 0) AudioManager.instance.Play(diedSFXName);
-            // gameObject.SetActive(false);  moved to player.cs collider2d
+            gameObject.SetActive(false);
         }
         //heals the gameobject
         public void Heal(float extrahealth)
