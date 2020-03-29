@@ -15,7 +15,7 @@ namespace Core
         public float DropRateBonus { get; set; }
 
     }*/
-    public class Health : MonoBehaviour
+    internal class Health : MonoBehaviour
     {
         [HideInInspector]
         public float healthPoints;
@@ -57,7 +57,7 @@ namespace Core
                 if (healthPoints <= 0)
                 {
                     died = true;
-                    //Died();
+                    Died();
                 }
                 
             }

@@ -5,39 +5,47 @@ using UnityEngine.SceneManagement;
 namespace Core{
     public class MainMenu : MonoBehaviour
     {
-        void Start(){
-            if(gameObject.GetComponent<Canvas>() == null)
-            {
-                gameObject.GetComponent<Canvas>().enabled = false;
-                gameObject.SetActive(false);
-            }
-            
-            
-        }
-        public void playGame()
+        public GameObject settingCanvas, mainCanvas;
+        private void Start()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+            if (!settingCanvas)
+            {
+                settingCanvas = GameObject.Find("SettingsCanvas");
+            }
+            if (settingCanvas)
+            {
+                settingCanvas.SetActive(false);
+            }
+            if (!mainCanvas)
+            {
+                mainCanvas = GameObject.Find("MainCanvas");
+            }
+        }
+        public void PlayGame()
+        {
+            SceneManager.LoadScene(1);
         }
 
-        public void quitGame()
+        public void QuitGame()
         {
             Application.Quit();//only work when playing the .exe
-            
         }
 
-        public void backButton()
+        public void BackButton()
         {
-            SceneManager.LoadScene(0); //Scene 0 is the main menu
+            settingCanvas.SetActive(false);
+            mainCanvas.SetActive(true);
         }
 
-        public void settingsScene()
+        public void SettingsButton()
         {
-            SceneManager.LoadScene(2); //Scene index2= settings Scene
+            settingCanvas.SetActive(true);
+            mainCanvas.SetActive(false);
         }
 
-        public void restartButton()
+        public void RestartButton()
         {
-            SceneManager.LoadScene(1);//Scene1= first level
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //reload current scene
         }
     }
 

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Core;
 public class GameController : MonoBehaviour {
+    public float winningTime;
     public static GameController instance;
     public GameObject PauseMenu;
     public bool isDead = false;
@@ -28,8 +29,10 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    private void Awake() {
-        if(instance == null) {
+    private void Awake()
+    {
+        Time.timeScale = 1;
+        if (instance == null) {
             instance = this;
         }
         if(txt == null){
@@ -39,12 +42,12 @@ public class GameController : MonoBehaviour {
     }
     public void PlayerCrash() {
         // Display the Game Over Screen
-        StartCoroutine("Progressive");
+        StartCoroutine(Progressive());
 
     }
     public void PlayerClear(){
         // Displays the clear screen
-        StartCoroutine("ProgressiveClear");
+        StartCoroutine(ProgressiveClear());
     }
     private void Update() {
 
@@ -55,13 +58,12 @@ public class GameController : MonoBehaviour {
                 Time.timeScale = 0; // For some reason the enemies don't pause when this happens 
                 isPaused = true; 
                 PauseMenu.SetActive(true);
-                PauseMenu.GetComponent<Canvas>().enabled = false;
-
             }
             else
             {
                 Time.timeScale = 1;
                 isPaused = false;
+                PauseMenu.SetActive(false);
             }
         }
 
@@ -74,6 +76,5 @@ public class GameController : MonoBehaviour {
             PlayerCrash();
             displayingMessage = true;
         }
-
     }
 }
