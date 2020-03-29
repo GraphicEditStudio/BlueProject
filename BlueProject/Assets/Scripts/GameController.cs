@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Core;
 public class GameController : MonoBehaviour {
     public static GameController instance;
+    public GameObject PauseMenu;
     public bool isDead = false;
     public bool isPaused = false;
     public Text txt;
@@ -48,7 +50,7 @@ public class GameController : MonoBehaviour {
             {
                 Time.timeScale = 0;
                 isPaused = true;
-
+                PauseMenu.GetComponent<Canvas>().enabled = false;
             }
             else
             {

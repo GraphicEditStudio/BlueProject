@@ -2,36 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Core;
-public class MainMenu : MonoBehaviour
-{
-    void Start(){
-        gameObject.SetActive(false);
-        gameObject.GetComponent<Canvas>().enabled = false;
-    }
-    public void playGame()
+namespace Core{
+    public class MainMenu : MonoBehaviour
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
-    }
+        void Start(){
+            gameObject.SetActive(false);
+            gameObject.GetComponent<Canvas>().enabled = false;
+        }
+        public void playGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        }
 
-    public void quitGame()
-    {
-        Application.Quit();//only work when playing the .exe
+        public void quitGame()
+        {
+            Application.Quit();//only work when playing the .exe
             
+        }
+
+        public void backButton()
+        {
+            SceneManager.LoadScene(0); //Scene 0 is the main menu
+        }
+
+        public void settingsScene()
+        {
+            SceneManager.LoadScene(2); //Scene index2= settings Scene
+        }
+
+        public void restartButton()
+        {
+            SceneManager.LoadScene(1);//Scene1= first level
+        }
     }
 
-    public void backButton()
-    {
-        SceneManager.LoadScene(0); //Scene 0 is the main menu
-    }
-
-    public void settingsScene()
-    {
-        SceneManager.LoadScene(2); //Scene index2= settings Scene
-    }
-
-    public void restartButton()
-    {
-        SceneManager.LoadScene(1);//Scene1= first level
-    }
 }
