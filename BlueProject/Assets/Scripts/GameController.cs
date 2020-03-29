@@ -47,8 +47,8 @@ public class GameController : MonoBehaviour {
             if (!isPaused)
             {
                 Time.timeScale = 0;
-                isPaused = true;
-
+                isPaused = true; // for some reason enemies arent stopping
+                //here we need the trigger for the canvas_pause
             }
             else
             {
