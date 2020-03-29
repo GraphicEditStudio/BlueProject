@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyKilled: 0
   totalEnemy: 9
-  reqTimeToWin: 25
+  reqTimeToWin: 24
   PauseMenu: {fileID: 1107053269}
   isDead: 0
   displayingMessage: 0
@@ -3350,6 +3350,12 @@ MonoBehaviour:
   - name: Explosion
     clip: {fileID: 8300000, guid: 89b1cbdf74d7b614d8ecaee35cde34c5, type: 3}
     volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: e3563b33195a75c49b5e44873946ceb1, type: 3}
+    volume: 0.8
     pitch: 1
     loop: 0
     source: {fileID: 0}

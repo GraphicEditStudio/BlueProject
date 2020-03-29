@@ -282,7 +282,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &393695408
 GameObject:
@@ -554,26 +554,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: ee126e6da62c0b041997f884ea48a09b, type: 3}
-    volume: 0.1
+    clip: {fileID: 8300000, guid: d2efe9ad4b284c34f8d590fe9e94c4e3, type: 3}
+    volume: 0.4
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: LaserShoot
-    clip: {fileID: 8300000, guid: 7a3512d9bc2adaa498a5744f2f091496, type: 3}
-    volume: 0.6
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: EnemyDeath
-    clip: {fileID: 8300000, guid: 9d6f6a625e754c64087152a5192eda07, type: 3}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: e3563b33195a75c49b5e44873946ceb1, type: 3}
     volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Explosion
-    clip: {fileID: 8300000, guid: 89b1cbdf74d7b614d8ecaee35cde34c5, type: 3}
-    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -589,7 +577,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591873179
 GameObject:
@@ -1297,7 +1285,7 @@ RectTransform:
   - {fileID: 1714215806}
   - {fileID: 98370494}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1537,7 +1525,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 362599207}
-        m_MethodName: SettingsScene
+        m_MethodName: SettingsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
