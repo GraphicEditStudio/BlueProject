@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Core;
 public class GameController : MonoBehaviour {
+    [HideInInspector]
+    public int enemyKilled = 0;
+    public int totalEnemy;
     public float reqTimeToWin = 100f;
     public static GameController instance;
     public GameObject PauseMenu;
@@ -20,7 +23,7 @@ public class GameController : MonoBehaviour {
         yield return null;
     }
     private IEnumerator Progressive(){
-        string temporaryText = "Game Over";
+        string temporaryText = "Game Over\nPress Enter to retry";
         int len = temporaryText.Length;
         for (int i = 0; i < len; i++){
             txt.text += temporaryText[i];
@@ -29,11 +32,11 @@ public class GameController : MonoBehaviour {
     }
 
     private IEnumerator ProgressiveClear(){
-        string temporaryText = "You\nSurvived!";
+        string temporaryText = "You\nSurvived!\nTotal Enemy Killed:\n"+ enemyKilled+" / " + totalEnemy;
         int len = temporaryText.Length;
         for(int i = 0; i < len; i++){
             txt.text += temporaryText[i];
-            yield return new WaitForSeconds(displayDelay);
+            yield return new WaitForSeconds(displayDelay/2);
         }
     }
 
@@ -81,7 +84,7 @@ public class GameController : MonoBehaviour {
     {
         if (!isPaused)
         {
-            Time.timeScale = 0; // For some reason the enemies don't pause when this happens 
+            Time.timeScale = 0; 
             isPaused = true;
             PauseMenu.SetActive(true);
         }

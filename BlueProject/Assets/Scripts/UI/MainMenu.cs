@@ -21,6 +21,10 @@ namespace Core{
                 mainCanvas = GameObject.Find("MainCanvas");
             }
         }
+        public void ToMainMenu()
+        {
+            SceneManager.LoadScene(0);
+        }
         public void PlayGame()
         {
             SceneManager.LoadScene(1);

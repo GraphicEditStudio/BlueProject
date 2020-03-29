@@ -76,6 +76,7 @@ namespace Core
             */
             //disable movement
             //disable animations
+            if (gameObject.CompareTag("Enemy")) GameController.instance.enemyKilled++;
             if (diedVFXName.Length != 0) PoolerManager.instance.Spawn(diedVFXName, transform.position, Quaternion.identity).transform.SetParent(null);
             if (diedSFXName.Length != 0) AudioManager.instance.Play(diedSFXName);
             gameObject.SetActive(false);
