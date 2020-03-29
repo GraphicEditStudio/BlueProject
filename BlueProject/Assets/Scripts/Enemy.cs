@@ -17,7 +17,7 @@ namespace Core
         void Update()
         {
             if(healthObject.healthPoints <= 0){
-                gameObject.setActive(false);
+                gameObject.SetActive(false);
             }
         }
     }
