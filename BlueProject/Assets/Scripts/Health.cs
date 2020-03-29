@@ -15,7 +15,7 @@ namespace Core
         public float DropRateBonus { get; set; }
 
     }*/
-    internal class Health : MonoBehaviour
+    public class Health : MonoBehaviour
     {
         [HideInInspector]
         public float healthPoints;
