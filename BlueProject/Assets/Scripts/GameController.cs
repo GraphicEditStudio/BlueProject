@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour {
     }
     private void Update() {
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) && !this.displayingMessage)
         {
             if (!isPaused)
             {
