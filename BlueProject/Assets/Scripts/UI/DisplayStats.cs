@@ -20,7 +20,7 @@ public class DisplayStats : MonoBehaviour
 
     public static void UpdateHealth()
     {
-        hp.text = " x " + player.GetCurrentHP();
+        hp.text = " x " + Player.instance.GetCurrentHP();
     }
     public static void UpdateRocketAmmo(int ammo)
     {

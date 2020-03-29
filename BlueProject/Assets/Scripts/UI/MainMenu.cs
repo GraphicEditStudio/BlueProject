@@ -60,6 +60,10 @@ namespace Core{
             audioManager.Play("ButtonClick");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //reload current scene
         }
+        public void ButtonClickSound()
+        {
+            audioManager.Play("ButtonClick");
+        }
     }
 
 }
