@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Core;
+using JetBrains.Annotations;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+
     public float shieldDuration;
     public GameObject shield;
 
     private Health playerHealth;
     public float speed = 12f;
     private Rigidbody2D rb;
+
+    private GameController controllerCommunicator;
+    public GameObject controller;
 
     private Vector2 screenTop;
     private Vector2 screenBottom;
@@ -25,6 +31,14 @@ public class Player : MonoBehaviour
 
     private bool shieldActive=false;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+    public int GetCurrentHP()
+    {
+        return playerHealth.healthPoints;
+    }
     // Use this for initialization
     void Start()
     {
@@ -34,6 +48,8 @@ public class Player : MonoBehaviour
         screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         shipHeight = transform.localScale.y / 2;
         shipWidth = transform.localScale.x / 2;
+        controllerCommunicator =  controller.GetComponent<GameController>();
+        DisplayStats.UpdateHealth();
     }
 
     // Update is called once per frame
@@ -93,7 +109,18 @@ public class Player : MonoBehaviour
         if (coll.gameObject.tag == "Enemy" && !shieldActive)
         {
             playerHealth.TakeDamage(1);
-            if (playerHealth.healthPoints > 0) StartCoroutine(SetShield(shieldDuration));
+            DisplayStats.UpdateHealth();
+            if (playerHealth.healthPoints > 0)
+            {
+                StartCoroutine(SetShield(shieldDuration));
+            }
+            if (playerHealth.healthPoints <= 0)
+            {
+                controllerCommunicator.isDead = true;
+                //controllerCommunicator.PlayerCrash();
+                playerHealth.Died();
+            }
+
         }
     }
     IEnumerator SetShield(float duration)

@@ -18,8 +18,8 @@ namespace Core
     internal class Health : MonoBehaviour
     {
         [HideInInspector]
-        public float healthPoints;
-        public float maxHealthPoints;
+        public int healthPoints;
+        public int maxHealthPoints;
         //[HideInInspector] bool godMode;       
         //public delegate void SomeBodyDiedEventHandler(ObjectRef refe);
         //subscribe to this event to get notification on death of object
@@ -49,7 +49,7 @@ namespace Core
             }
         }
         */
-        public void TakeDamage(float damage) //, GameObject caller = null) explain why we neeed caller?
+        public void TakeDamage(int damage) //, GameObject caller = null) explain why we neeed caller?
         {
             if (!died)
             {
@@ -62,7 +62,7 @@ namespace Core
                 
             }
         }
-        private void Died()
+        public void Died()
         {
             //last location can be used for drop location
             //I originally used this event for chest drops on a hack and slash game
@@ -76,12 +76,13 @@ namespace Core
             */
             //disable movement
             //disable animations
+            if (gameObject.CompareTag("Enemy")) GameController.instance.enemyKilled++;
             if (diedVFXName.Length != 0) PoolerManager.instance.Spawn(diedVFXName, transform.position, Quaternion.identity).transform.SetParent(null);
             if (diedSFXName.Length != 0) AudioManager.instance.Play(diedSFXName);
             gameObject.SetActive(false);
         }
         //heals the gameobject
-        public void Heal(float extrahealth)
+        public void Heal(int extrahealth)
         {
             healthPoints = (healthPoints + extrahealth) < maxHealthPoints ? (healthPoints + extrahealth) : maxHealthPoints;
         }

@@ -8,7 +8,7 @@ namespace Core.Combat
     {
         //set parent when launching the projectile
         [HideInInspector] public GameObject parent;
-        public float damage = 1;
+        public int damage = 1;
         public string hitSFXName;
         public string hitVFXName;
 
@@ -31,7 +31,7 @@ namespace Core.Combat
             }
         }
         */
-        public void TranslateDamage(GameObject target, float attackPower)
+        public void TranslateDamage(GameObject target, int attackPower)
         {
             var health = target.GetComponent<Health>();
             health.TakeDamage(attackPower);

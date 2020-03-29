@@ -7,7 +7,8 @@ using Core.Combat;
 
 public class ShootRocket : MonoBehaviour
 {
-    //public GameObject rocketPrefab;
+    GameController controller;
+
 	public int ammo;
 	public float cooldown;
 	
@@ -22,11 +23,14 @@ public class ShootRocket : MonoBehaviour
 	
     void Start()
     {
+        controller = GameController.instance;
         pooler = PoolerManager.instance; // Pooler Manager 
+        DisplayStats.UpdateRocketAmmo(ammo);
     }
 	
     void Update()
     {
+        if (controller.isPaused) return;
         if (ammo > 0 && Input.GetKeyDown(rocket))
         {
             if (Time.time > shootTime + cooldown)
@@ -40,6 +44,7 @@ public class ShootRocket : MonoBehaviour
                 AudioManager.instance.Play("RocketShoot");
 
                 ammo--;
+                DisplayStats.UpdateRocketAmmo(ammo);
             }
         }
     }

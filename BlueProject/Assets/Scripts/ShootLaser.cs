@@ -7,6 +7,8 @@ using BlueGame;
 
 public class ShootLaser : MonoBehaviour
 {
+    GameController controller;
+
     public int ammo;
     public float cooldown;
     
@@ -20,12 +22,14 @@ public class ShootLaser : MonoBehaviour
 
     void Start()
     {
+        controller = GameController.instance;
         pooler = PoolerManager.instance;
     }
 
 	
 	void Update()
     {
+        if (controller.isPaused) return;
         if (ammo > 0 && Input.GetKey(laser))
         {
             if (Time.time > shootTime + cooldown)
