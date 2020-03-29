@@ -31,7 +31,6 @@ public class GameController : MonoBehaviour {
         
     }
     public void PlayerCrash() {
-        this.isDead = true;
         // Display the Game Over Screen
         StartCoroutine("Progressive");
 
@@ -44,7 +43,10 @@ public class GameController : MonoBehaviour {
         if (this.isDead && Input.GetKeyDown(KeyCode.Return)) {
             //...reload the current scene.
             SceneManager.LoadScene(1);
-
         }
+        if(this.isDead){
+            PlayerCrash();
+        }
+
     }
 }
