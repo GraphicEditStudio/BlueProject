@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour {
             instance = this;
         }
         if(txt == null){
-            txt = GameObject.Find("DisplayText");
+           // txt = GameObject.Find("DisplayText");
         }
         
     }
