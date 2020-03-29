@@ -6,7 +6,8 @@ namespace Core{
     public class MainMenu : MonoBehaviour
     {
         void Start(){
-            if(gameObject.GetComponent<Canvas>() == null){
+            if(gameObject.GetComponent<Canvas>() == null)
+            {
                 gameObject.GetComponent<Canvas>().enabled = false;
                 gameObject.SetActive(false);
             }
