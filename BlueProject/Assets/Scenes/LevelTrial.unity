@@ -3548,6 +3548,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: RocketShoot
+    clip: {fileID: 8300000, guid: fda9b5d2ef8aac64083245ebe5f0fa9d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   - name: ButtonClick
     clip: {fileID: 8300000, guid: e3563b33195a75c49b5e44873946ceb1, type: 3}
     volume: 0.8
