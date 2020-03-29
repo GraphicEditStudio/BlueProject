@@ -6,7 +6,7 @@ namespace Core
 {
     public class Enemy : MonoBehaviour
     {
-        public Health healthObject;
+        Health healthObject;
         public EnemyMovement movementObject;
         // Start is called before the first frame update
         void Start()
