@@ -23,6 +23,9 @@ namespace Core{
             {
                 mainCanvas = GameObject.Find("MainCanvas");
             }
+
+            
+
         }
         public void ToMainMenu()
         {
