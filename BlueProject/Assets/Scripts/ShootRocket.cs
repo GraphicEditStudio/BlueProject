@@ -7,9 +7,8 @@ using Core.Combat;
 
 public class ShootRocket : MonoBehaviour
 {
-    GameController controller;
-
-	public int ammo;
+    public int initialAmmo = 8;
+    public int ammoType = 1; //check Player.cs for types
 	public float cooldown;
 	
     [SerializeField]
@@ -19,19 +18,25 @@ public class ShootRocket : MonoBehaviour
 	
 	public Vector2 initForce;
 
-	private PoolerManager pooler;	
-	
+	private PoolerManager pooler;
+    private GameController controller;
+    private Player player;
+    private AudioManager audioManager;
+
     void Start()
     {
+        audioManager = AudioManager.instance;
+        player = Player.instance;
         controller = GameController.instance;
-        pooler = PoolerManager.instance; // Pooler Manager 
-        DisplayStats.UpdateRocketAmmo(ammo);
+        pooler = PoolerManager.instance; // Pooler Manager
+        player.ammo[ammoType] = initialAmmo;
+        DisplayStats.UpdateRocketAmmo(initialAmmo);
     }
 	
     void Update()
     {
         if (controller.isPaused) return;
-        if (ammo > 0 && Input.GetKeyDown(rocket))
+        if (player.ammo[ammoType] > 0 && Input.GetKeyDown(rocket))
         {
             if (Time.time > shootTime + cooldown)
             {
@@ -41,10 +46,10 @@ public class ShootRocket : MonoBehaviour
                 
                 myRocket.GetComponent<Projectile>().parent = transform.parent.gameObject;
                 myRocket.GetComponent<Rigidbody2D>().AddForce(initForce, ForceMode2D.Impulse);
-                AudioManager.instance.Play("RocketShoot");
+                audioManager.Play("RocketShoot");
 
-                ammo--;
-                DisplayStats.UpdateRocketAmmo(ammo);
+                player.ammo[ammoType]--;
+                DisplayStats.UpdateRocketAmmo(player.ammo[ammoType]);
             }
         }
     }

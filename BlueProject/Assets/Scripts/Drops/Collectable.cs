@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class Collectable : MonoBehaviour
+{
+    [Serializable]
+    public class PowerUp : UnityEvent {}
+
+    [SerializeField]
+    private PowerUp on_Collect = new PowerUp();
+
+    Transform player;
+    public float speed = 0.5f, minDistance = 1f;
+    bool triggered = false;
+    private void OnEnable()
+    {
+        triggered = false;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && !triggered)
+        {
+            triggered = true;
+            player = collision.transform;
+            StartCoroutine(FollowPlayer());
+        }
+    }
+    IEnumerator FollowPlayer()
+    {
+        Vector3 distance;
+        float distanceSqr = minDistance * minDistance;
+        distance = player.position - transform.position;
+        while (distance.sqrMagnitude > distanceSqr)
+        {
+            transform.Translate(distance.normalized * speed);
+            distance = player.position - transform.position;
+            yield return null;
+        }
+        on_Collect.Invoke();
+        gameObject.SetActive(false);
+    }
+}

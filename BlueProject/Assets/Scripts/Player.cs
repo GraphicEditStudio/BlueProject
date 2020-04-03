@@ -15,6 +15,15 @@ public class Player : MonoBehaviour
     public float speed = 12f;
     private Rigidbody2D rb;
 
+    [HideInInspector]
+    public int[] ammo = new int[2];
+    /* 0 for lasers
+     * 1 for rockets
+     * to be added later
+     *
+     *
+     */
+
     private GameController controllerCommunicator;
     public GameObject controller;
 
@@ -34,6 +43,16 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+    public void Heal(int amount)
+    {
+        playerHealth.Heal(amount);
+        DisplayStats.UpdateHealth();
+    }
+    public void AddAmmo(int type, int amount)
+    {
+        ammo[type] += amount;
+        DisplayStats.UpdateRocketAmmo(ammo[1]);
     }
     public int GetCurrentHP()
     {
