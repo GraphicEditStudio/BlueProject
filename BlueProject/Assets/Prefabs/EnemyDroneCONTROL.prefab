@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moves: []
+  enemySpeed: 1
 --- !u!114 &4264219519181924650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 5
   maxHealthPoints: 5
-  diedVFXName: ExplosionFX
+  diedVFXName: ExplosionFX2
   diedSFXName: EnemyDeath
 --- !u!60 &7863930994420588534
 PolygonCollider2D:

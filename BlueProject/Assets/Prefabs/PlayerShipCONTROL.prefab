@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 0
   maxHealthPoints: 3
-  diedVFXName: ExplosionFX
+  diedVFXName: ExplosionFX1
   diedSFXName: Explosion
 --- !u!1 &6563036454229069805
 GameObject:
@@ -299,6 +299,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1976932529866256627}
     m_Modifications:
+    - target: {fileID: 1049893906757961991, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049893906757961991, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049893906757961991, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049893906757961991, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049893906757961991, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2014061451820001130, guid: eee0e99719fac7e4887508efd9e5bd7f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -382,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 7855205857622097323, guid: eee0e99719fac7e4887508efd9e5bd7f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee0e99719fac7e4887508efd9e5bd7f, type: 3}
