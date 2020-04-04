@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using BlueGame;
 using UnityEngine;
@@ -17,6 +16,8 @@ namespace Core
     }*/
     internal class Health : MonoBehaviour
     {
+        [Range(0, 1)]
+        public float dropChance = 0.3f;
         [HideInInspector]
         public int healthPoints;
         public int maxHealthPoints;
@@ -76,8 +77,15 @@ namespace Core
             */
             //disable movement
             //disable animations
-            if (gameObject.CompareTag("Enemy")) GameController.instance.enemyKilled++;
-            if (diedVFXName.Length != 0) PoolerManager.instance.Spawn(diedVFXName, transform.position, Quaternion.identity).transform.SetParent(null);
+            if (gameObject.CompareTag("Enemy"))
+            {
+                GameController.instance.enemyKilled++;
+                if (Random.Range(0, 1f) > 1 - dropChance)
+                {
+                    PoolerManager.instance.Spawn(PowerUpList.instance.GetName(Random.Range(0, 2)), transform.position, Quaternion.identity);
+                }
+            }
+            if (diedVFXName.Length != 0) PoolerManager.instance.Spawn(diedVFXName, transform.position, Quaternion.identity);
             if (diedSFXName.Length != 0) AudioManager.instance.Play(diedSFXName);
             gameObject.SetActive(false);
         }

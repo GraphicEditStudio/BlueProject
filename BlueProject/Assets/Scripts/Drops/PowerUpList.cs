@@ -36,6 +36,10 @@ public class PowerUpList : MonoBehaviour
     {
         return list[id].effect;
     }
+    public string GetName(int id)
+    {
+        return list[id].name;
+    }
     //useless for the moment
     //public int GetId(string name)
     //{
