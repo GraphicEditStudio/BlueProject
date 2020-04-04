@@ -4667,10 +4667,9 @@ MonoBehaviour:
     prefab: {fileID: 5450700201470840311, guid: e2d0ee125a2c7314aa1c4cc67de6d29e,
       type: 3}
     size: 6
-  - tag: ExplosionFX
-    prefab: {fileID: 6449292610521681355, guid: 237a98db9af41284ba825773181a696e,
-      type: 3}
-    size: 2
+  - tag: ExplosionFX1
+    prefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+    size: 5
   - tag: SpaceItems
     prefab: {fileID: 4769528128065914491, guid: cc2b1696475d4624bb5ccfd24a04109b,
       type: 3}
@@ -4683,6 +4682,9 @@ MonoBehaviour:
     prefab: {fileID: 8511918772908402071, guid: 04a3b89cdb97ce7499a4c27bc7282a15,
       type: 3}
     size: 3
+  - tag: ExplosionFX2
+    prefab: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
+    size: 5
 --- !u!4 &1862769547
 Transform:
   m_ObjectHideFlags: 0
@@ -5309,6 +5311,11 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5567224576741245701, guid: d35fef751347b644e82e15e9d2a9427b,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 7d43485d2e4cb5b45a5f4ffe72b2c3f1, type: 2}
     - target: {fileID: 6192481589066591899, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: m_SortingOrder
