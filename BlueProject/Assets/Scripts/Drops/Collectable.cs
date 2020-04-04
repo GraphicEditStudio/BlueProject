@@ -1,20 +1,23 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Collectable : MonoBehaviour
 {
-    [Serializable]
-    public class PowerUp : UnityEvent {}
+    private UnityEvent on_Collect;
 
-    [SerializeField]
-    private PowerUp on_Collect = new PowerUp();
+    private Transform player;
 
-    Transform player;
     public float speed = 0.5f, minDistance = 1f;
-    bool triggered = false;
+    public int id;
+    //public string powerName;
+
+    private bool triggered = false;
+    private void Start()
+    {
+        on_Collect = PowerUpList.instance.GetPowerUpEffect(id);
+    }
     private void OnEnable()
     {
         triggered = false;
