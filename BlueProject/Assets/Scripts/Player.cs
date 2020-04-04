@@ -15,7 +15,13 @@ public class Player : MonoBehaviour
     public float speed = 12f;
     private Rigidbody2D rb;
 
-    private GameController controllerCommunicator;
+    [HideInInspector]
+    public int[] ammo = new int[2];
+    //0 for lasers
+    //1 for rockets
+    //to be added later;
+
+    //private GameController controllerCommunicator;
     public GameObject controller;
 
     private Vector2 screenTop;
@@ -35,6 +41,16 @@ public class Player : MonoBehaviour
     {
         instance = this;
     }
+    public void Heal(int amount)
+    {
+        playerHealth.Heal(amount);
+        DisplayStats.UpdateHealth();
+    }
+    public void AddAmmo(int type, int amount)
+    {
+        ammo[type] += amount;
+        DisplayStats.UpdateRocketAmmo(ammo[1]);
+    }
     public int GetCurrentHP()
     {
         return playerHealth.healthPoints;
@@ -48,7 +64,7 @@ public class Player : MonoBehaviour
         screenTop = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         shipHeight = transform.localScale.y / 2;
         shipWidth = transform.localScale.x / 2;
-        controllerCommunicator =  controller.GetComponent<GameController>();
+        //controllerCommunicator = controller.GetComponent<GameController>();
         DisplayStats.UpdateHealth();
     }
 
@@ -116,8 +132,9 @@ public class Player : MonoBehaviour
             }
             if (playerHealth.healthPoints <= 0)
             {
-                controllerCommunicator.isDead = true;
+                //controllerCommunicator.isDead = true;
                 //controllerCommunicator.PlayerCrash();
+                GameController.instance.isDead = true;
                 playerHealth.Died();
             }
 

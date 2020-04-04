@@ -39,6 +39,7 @@ namespace Core.Combat
         private void OnTriggerEnter2D(Collider2D target)
         {
             if (target.CompareTag("Projectile")) return;
+            if (target.CompareTag("Collectable")) return;
             //don't collide with enemy
             if ((target.CompareTag("Enemy") && parent.CompareTag("Player")) || (target.CompareTag("Player") && parent.CompareTag("Enemy")))
             {
