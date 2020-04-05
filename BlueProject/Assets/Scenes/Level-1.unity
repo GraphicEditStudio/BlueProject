@@ -191,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -415,7 +415,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -542,7 +542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1378,7 +1378,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -1657,7 +1657,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -2429,7 +2429,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -2800,7 +2800,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -2934,7 +2934,7 @@ PrefabInstance:
     - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
@@ -4662,7 +4662,7 @@ MonoBehaviour:
   - tag: PRocket
     prefab: {fileID: 9019721013778163892, guid: 40a46d27812709d48bdf3e1bf9046306,
       type: 3}
-    size: 2
+    size: 8
   - tag: PLaser
     prefab: {fileID: 5450700201470840311, guid: e2d0ee125a2c7314aa1c4cc67de6d29e,
       type: 3}
@@ -4769,7 +4769,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -5217,7 +5217,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -5295,6 +5295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: initForce.x
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790502381803552541, guid: d35fef751347b644e82e15e9d2a9427b,
+        type: 3}
+      propertyPath: maxHealthPoints
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3743869059860946831, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
@@ -5504,7 +5509,7 @@ PrefabInstance:
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: maxHealthPoints
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4264219519181924650, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
