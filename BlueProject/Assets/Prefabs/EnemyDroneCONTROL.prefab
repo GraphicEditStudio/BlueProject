@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6daaf87aa21ab40aeb057792fb44f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropChance: 0.3
   healthPoints: 5
   maxHealthPoints: 5
   diedVFXName: ExplosionFX2
