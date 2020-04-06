@@ -123,7 +123,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   damage: 3
   hitSFXName: Explosion
-  hitVFXName: ExplosionFX
+  hitVFXName: ExplosionFX3
 --- !u!114 &2932701610970934902
 MonoBehaviour:
   m_ObjectHideFlags: 0
