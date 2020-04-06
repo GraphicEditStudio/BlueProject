@@ -56,7 +56,7 @@ namespace Core.Combat
         private void Hit()
         {
             //explosion or damage effect
-            if (hitVFXName.Length != 0) PoolerManager.instance.Spawn(hitVFXName, transform.position, Quaternion.identity).transform.SetParent(null);
+            if (hitVFXName.Length != 0) PoolerManager.instance.Spawn(hitVFXName, transform.position, Quaternion.identity);            
             if (hitSFXName.Length != 0) AudioManager.instance.Play(hitSFXName);
             gameObject.SetActive(false);
         }

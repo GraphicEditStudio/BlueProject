@@ -4669,7 +4669,7 @@ MonoBehaviour:
     size: 6
   - tag: ExplosionFX1
     prefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
-    size: 5
+    size: 2
   - tag: SpaceItems
     prefab: {fileID: 4769528128065914491, guid: cc2b1696475d4624bb5ccfd24a04109b,
       type: 3}
@@ -4684,7 +4684,10 @@ MonoBehaviour:
     size: 3
   - tag: ExplosionFX2
     prefab: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
-    size: 5
+    size: 3
+  - tag: ExplosionFX3
+    prefab: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
+    size: 3
 --- !u!4 &1862769547
 Transform:
   m_ObjectHideFlags: 0
