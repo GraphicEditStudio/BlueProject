@@ -652,7 +652,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6069b3d8d7732b44785a46d192a1b8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyKilled: 0
+  totalEnemy: 0
+  reqTimeToWin: 100
+  PauseMenu: {fileID: 0}
   isDead: 0
+  displayingMessage: 0
+  isPaused: 0
   txt: {fileID: 0}
   displayDelay: 0.45
 --- !u!114 &1035935655
@@ -771,6 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6daaf87aa21ab40aeb057792fb44f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropChance: 0.3
   healthPoints: 3
   maxHealthPoints: 3
   diedVFXName: ExplosionFX
@@ -2101,7 +2108,7 @@ PrefabInstance:
     - target: {fileID: 5246412285089308566, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5462008850499912054, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}

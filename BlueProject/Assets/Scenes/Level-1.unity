@@ -2889,12 +2889,12 @@ PrefabInstance:
     - target: {fileID: 5246412285089308566, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_Name
-      value: Level-1
+      value: Level-1 Tiles
       objectReference: {fileID: 0}
     - target: {fileID: 5246412285089308566, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7056294548544119183, guid: 429dee1e540ab894ab56eb6081685fe5,
         type: 3}
@@ -5610,6 +5610,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: ScreenBorder
       objectReference: {fileID: 0}
+    - target: {fileID: 6027398974523233559, guid: ee44a805f35cfdf439eb367fcb5cc506,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6263125043625418773, guid: ee44a805f35cfdf439eb367fcb5cc506,
         type: 3}
       propertyPath: tileSizeX
@@ -5715,6 +5720,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScrollBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371540879761324926, guid: ee44a805f35cfdf439eb367fcb5cc506,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6263125043625418773, guid: ee44a805f35cfdf439eb367fcb5cc506, type: 3}
