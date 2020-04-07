@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7528102091908952740
 MonoBehaviour:
@@ -138,7 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 900
   rb: {fileID: 9019721013778163896}
-  destroyDelay: 1.75
+  render: {fileID: 9019721013778163894}
+  collide: {fileID: 5717265542674280204}
+  trailDelay: 3
 --- !u!70 &5717265542674280204
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -259,7 +261,7 @@ TrailRenderer:
     shadowBias: 0
     generateLightingData: 0
   m_MinVertexDistance: 0
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1
 --- !u!1001 &7382628195574681813
 PrefabInstance:

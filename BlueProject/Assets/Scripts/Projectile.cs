@@ -1,5 +1,6 @@
 ﻿using Audio;
 using UnityEngine;
+using UnityEngine.Events;
 using BlueGame;
 
 namespace Core.Combat
@@ -11,7 +12,16 @@ namespace Core.Combat
         public int damage = 1;
         public string hitSFXName;
         public string hitVFXName;
-
+        public delegate void hitMethod();
+        public hitMethod Deactivate;
+        private void Awake()
+        {
+            Deactivate = Disable;
+        }
+        void Disable()
+        {
+            gameObject.SetActive(false);
+        }
         /*  we don't need this because of pooling
         float jictimer = 0;
         public float lifeSpan = 5;             
@@ -47,7 +57,7 @@ namespace Core.Combat
             }
             if (target.CompareTag("ScreenBorder"))
             {
-                gameObject.SetActive(false);
+                Deactivate();
                 return;
             }
             if(!target.CompareTag(parent.tag))Hit();
@@ -58,7 +68,7 @@ namespace Core.Combat
             //explosion or damage effect
             if (hitVFXName.Length != 0) PoolerManager.instance.Spawn(hitVFXName, transform.position, Quaternion.identity);            
             if (hitSFXName.Length != 0) AudioManager.instance.Play(hitSFXName);
-            gameObject.SetActive(false);
+            Deactivate();
         }
        
     }

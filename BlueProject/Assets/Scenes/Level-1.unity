@@ -5319,11 +5319,6 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 5567224576741245701, guid: d35fef751347b644e82e15e9d2a9427b,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 7d43485d2e4cb5b45a5f4ffe72b2c3f1, type: 2}
     - target: {fileID: 6192481589066591899, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: m_SortingOrder

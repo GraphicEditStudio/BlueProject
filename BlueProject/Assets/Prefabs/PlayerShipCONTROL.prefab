@@ -129,6 +129,7 @@ MonoBehaviour:
   shieldDuration: 1
   shield: {fileID: 3743869059860946831}
   speed: 1500
+  ammo: 0000000000000000
   controller: {fileID: 0}
 --- !u!50 &5567224576741245701
 Rigidbody2D:
@@ -163,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6daaf87aa21ab40aeb057792fb44f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropChance: 0.3
   healthPoints: 0
   maxHealthPoints: 3
   diedVFXName: ExplosionFX1
@@ -210,7 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd6439bd3a37394db4b748e8409257d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 4
+  initialAmmo: 8
+  ammoType: 1
   cooldown: 0.6
   rocket: 32
   initForce: {x: 0, y: 0}
@@ -288,10 +291,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07779aa32d06ec84285b70cf427c56e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 4
+  initialAmmo: 1000
+  ammoType: 0
   cooldown: 0.1
   laser: 323
-  laserOnStart: 4
 --- !u!1001 &6843124015666012708
 PrefabInstance:
   m_ObjectHideFlags: 0
