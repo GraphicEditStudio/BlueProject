@@ -19,14 +19,14 @@ namespace Core
         [Range(0, 1)]
         public float dropChance = 0.3f;
         [HideInInspector]
-        public int healthPoints;
-        public int maxHealthPoints;
+        [SerializeField] public int healthPoints;
+        [SerializeField] public int maxHealthPoints;
         //[HideInInspector] bool godMode;       
         //public delegate void SomeBodyDiedEventHandler(ObjectRef refe);
         //subscribe to this event to get notification on death of object
         //public event SomeBodyDiedEventHandler DieMOFO;       
-        public string diedVFXName;
-        public string diedSFXName;
+        [SerializeField] public string diedVFXName;
+        [SerializeField] public string diedSFXName;
         private bool died;
         private void Awake()
         {
