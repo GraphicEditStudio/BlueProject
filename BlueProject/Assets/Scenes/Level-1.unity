@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -51,8 +51,8 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -97,8 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 27a82477c3d5c73429d62decb14c65ee,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -137,12 +136,12 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.9
+      value: 73.34
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -361,12 +360,12 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.9
+      value: 43.91
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.98
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -1603,12 +1602,12 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.900002
+      value: 17.62
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0348003
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -2375,12 +2374,12 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.9
+      value: 68.84
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.41
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -3110,7 +3109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1501160328
 Transform:
   m_ObjectHideFlags: 0
@@ -4176,7 +4175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1773245435
 Transform:
   m_ObjectHideFlags: 0
@@ -4718,12 +4717,12 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.15
+      value: 66.36
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01999998
+      value: -1.78
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -5037,7 +5036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!68 &1970026829
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -5373,7 +5372,7 @@ PrefabInstance:
     - target: {fileID: 6939805325973547318, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6939805325973547318, guid: d35fef751347b644e82e15e9d2a9427b,
         type: 3}
@@ -5478,12 +5477,12 @@ PrefabInstance:
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9000015
+      value: 21.56
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.93
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 2572951684259581624, guid: 2a6a083bb264016429f87613d81246a7,
         type: 3}
@@ -5603,7 +5602,7 @@ PrefabInstance:
     - target: {fileID: 1038401105877791301, guid: ee44a805f35cfdf439eb367fcb5cc506,
         type: 3}
       propertyPath: scrollSpeed
-      value: 2
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1898060766922700166, guid: ee44a805f35cfdf439eb367fcb5cc506,
         type: 3}

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5450700201470840307}
   - component: {fileID: -2154165399645973481}
   - component: {fileID: 5450700201470840305}
+  - component: {fileID: 6864727211536247236}
   - component: {fileID: 5450700201470840310}
   - component: {fileID: 8398273272828733486}
-  - component: {fileID: 6864727211536247236}
   m_Layer: 0
   m_Name: PlayersLaser
   m_TagString: Projectile
@@ -126,6 +126,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &6864727211536247236
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5450700201470840311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.72695345, y: 0.118592404}
+  m_Direction: 1
 --- !u!114 &5450700201470840310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,19 +173,3 @@ MonoBehaviour:
   damage: 1
   hitSFXName: LaserHit
   hitVFXName: 
---- !u!70 &6864727211536247236
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450700201470840311}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.72695345, y: 0.118592404}
-  m_Direction: 1
