@@ -393,8 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireStartPoint: {fileID: 6172037905477938300}
   fireEndPoint: {fileID: 835771037407181613}
-  impactEffect: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
-    type: 3}
+  diedVFXName: ExplosionFX3
 --- !u!1 &6939805325973547316
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +609,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 147.88
       objectReference: {fileID: 0}
+    - target: {fileID: 2444747136257122100, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395225159520384546, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5572525288472600901, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7608398228476846718, guid: eee0e99719fac7e4887508efd9e5bd7f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -659,6 +673,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.8619835
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814962958262408765, guid: eee0e99719fac7e4887508efd9e5bd7f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee0e99719fac7e4887508efd9e5bd7f, type: 3}

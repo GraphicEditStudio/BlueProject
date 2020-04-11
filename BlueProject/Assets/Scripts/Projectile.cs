@@ -22,25 +22,7 @@ namespace Core.Combat
         {
             gameObject.SetActive(false);
         }
-        /*  we don't need this because of pooling
-        float jictimer = 0;
-        public float lifeSpan = 5;             
-        void Update()
-        {
-            JustInCase();
-        }
-        private void JustInCase()
-        {
-            jictimer += Time.deltaTime;
-            transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * speed);
-            if (jictimer > lifeSpan)
-            {
-                //just in case
-                //destroy after 5 seconds
-                Destroy(this.gameObject);
-            }
-        }
-        */
+
         public void TranslateDamage(GameObject target, int attackPower)
         {
             var health = target.GetComponent<Health>();

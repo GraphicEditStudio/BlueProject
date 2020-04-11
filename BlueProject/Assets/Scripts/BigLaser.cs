@@ -1,26 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BlueGame;
 
 public class BigLaser : MonoBehaviour {
 
-	public Transform fireStartPoint;
-	public Transform fireEndPoint;
-	public GameObject impactEffect;
+	[SerializeField] public Transform fireStartPoint;
+	[SerializeField] public Transform fireEndPoint;
+	[SerializeField] public string diedVFXName;
+	
 	private LineRenderer LaserLine;
 	private WaitForSeconds ShotDuration = new WaitForSeconds(0.07f);
 	private RaycastHit2D HitInfo;
- 
-    void Start () {
+	
+    void Start () 
+	{
 	
 	LaserLine = GetComponent<LineRenderer>();
 	
     }
 
-	   void  FixedUpdate () 
-	  //void  Update ()
-	
-	{
+	 void  FixedUpdate () 
+	 {
 		
 		if (Input.GetButtonDown("Fire2"))
 		{
@@ -31,19 +32,17 @@ public class BigLaser : MonoBehaviour {
 		  if (HitInfo.collider)
 			{
 
-				     Instantiate(impactEffect, HitInfo.point, Quaternion.identity);
+				     //TO DO detect enemy and destroy it.
+					  PoolerManager.instance.Spawn(diedVFXName, HitInfo.point, Quaternion.identity);
 			   
 				 LaserLine.SetPosition(1, new Vector2(HitInfo.distance, -0.21f));
-					
-					//Debug.Log("hit!: " + HitInfo.distance.ToString());
-		
+						//Debug.Log("hit!: " + HitInfo.distance.ToString());
 			} 
 			 else
 			{
 
 				LaserLine.SetPosition(1, (fireEndPoint.right * 1000f));
-				
-					//Debug.Log("NOThit!: ");
+						//Debug.Log("NOThit!: ");
 			}
 			
 		}
@@ -53,7 +52,7 @@ public class BigLaser : MonoBehaviour {
     private IEnumerator ShotEffect()
     {
         LaserLine.enabled = true;
-        yield return ShotDuration;
+          yield return ShotDuration;
         LaserLine.enabled = false;
     }
 
