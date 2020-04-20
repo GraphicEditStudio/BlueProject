@@ -7,25 +7,25 @@ public class Rocket : MonoBehaviour
 {
     public float speed = 1;
     [SerializeField]
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
     [SerializeField]
     private  SpriteRenderer render;
-    [SerializeField]
-    private Collider2D collide;
+    //[SerializeField]
+    //private Collider2D collide;
 	public float trailDelay = 3f;
     private bool stillRunning = false; //to check if the coroutine is stil running
     private bool hit = false;
 
-    void Start()
+    protected void Start()
     {
-        collide = GetComponent<Collider2D>();
+        //collide = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         render = GetComponent<SpriteRenderer>();
         GetComponent<Projectile>().Deactivate = Hit;
         trailDelay = GetComponent<TrailRenderer>().time;
     }
 
-    void OnEnable()
+    protected void OnEnable()
     {
         if (stillRunning) StopCoroutine("Deactivate");
         stillRunning = false;
